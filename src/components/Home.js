@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import { Container, Row, Col, Button } from 'reactstrap';
+import { Link, withRouter } from 'react-router-dom';
 import home_background from '../img/home_background.jpg';
 import SocialLinks from './SocialLinks';
 
@@ -19,14 +20,18 @@ const Home = () => {
 
                 <Row className="mb3">
                     <Col xs="6" className="text-right">
-                        <Button className="homeButton montserrat-5 shadow">
-                            About Me
-                        </Button>
+                        <Link to='/about'>
+                            <Button className="homeButton montserrat-5 shadow">
+                                About Me
+                            </Button>
+                        </Link>
                     </Col>
                     <Col xs="6" className="text-left">
-                        <Button className="homeButton montserrat-5 shadow">
-                            View Work
-                        </Button>
+                        <Link to='/portfolio'>
+                            <Button className="homeButton montserrat-5 shadow">
+                                View Work
+                            </Button>
+                        </Link>
                     </Col>
                 </Row>
 
@@ -52,4 +57,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default withRouter(Home)
