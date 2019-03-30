@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar';
+import { Container, Row, Col } from 'reactstrap';
+
 
 export class About extends Component {
     constructor(props) {
@@ -15,7 +17,9 @@ export class About extends Component {
         return (
             <div>
                 <Navbar />
-                <h1>about me</h1>
+                <Container fluid className="pageContainer aboutContainer text-center">
+                    <h1>about me</h1>
+                </Container>
             </div>
         )
     }

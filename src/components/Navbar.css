@@ -5,6 +5,7 @@ nav {
     top: 0;
     padding: 0 30px;
     background-color: var(--secondary-colour);
+    z-index: 110;
 }
 
 .brandLink:hover {
@@ -15,4 +16,19 @@ nav {
     font-size: 4.5rem;
     margin: 0 20px 0 0;
     color: var(--primary-colour);
+}
+
+button:focus {
+    outline: none;
+}
+
+.menuContainer {
+    position: absolute;
+    top: -200%;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(65, 82, 111, 0.71);
+    transition: 0.7s;
+    z-index: 100;
 }
