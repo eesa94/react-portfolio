@@ -4,6 +4,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .welcomeHeader {
@@ -13,8 +14,8 @@
 .homeButton {
     color: #5dfdd1;
     background-color: #41526f;
-    /* background-image: linear-gradient(to right, #65748e, #5c6b86, #53637e, #4a5a77, #41526f); */
     border: 2px solid #41526f;
+    border-bottom-right-radius: 10px;
     font-size: 1.6rem;
     letter-spacing: 2px;
     line-height: 1.8;
@@ -24,7 +25,6 @@
 .homeButton:hover {
     color: #41526f;
     background-color: #5dfdd1;
-    /* background-image: linear-gradient(to right, #37daad, #41e3b6, #4bebbf, #54f4c8, #5dfdd1); */
     border: 2px solid #41526f;
 }
 

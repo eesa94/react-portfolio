@@ -1,0 +1,14 @@
+nav {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 0 30px;
+    background-color: var(--secondary-colour);
+}
+
+.brand-name {
+    font-size: 4.5rem;
+    margin: 0 20px 0 0;
+    color: var(--primary-colour);
+}
