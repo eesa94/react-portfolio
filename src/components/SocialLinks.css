@@ -1,6 +1,6 @@
 .contactIconsContainer {
     padding-top: 20px;
-    border-top: 2px solid #41526f;
+    border-top: 2px solid var(--secondary-colour);
 }
 
 .contactIcon {
@@ -8,12 +8,12 @@
     padding: 10px;
     margin-right: 10px;
     font-size: 1.8rem;
-    color: #5dfdd1;
-    background-color: #41526f;
+    color: var(--primary-colour);
+    background-color: var(--secondary-colour);
     transition: 0.5s;
 }
 
 .contactIcon:hover {
-    color: #41526f;
-    background-color: #5dfdd1;
+    color: var(--secondary-colour);
+    background-color: var(--primary-colour);
 }
