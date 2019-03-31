@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Navbar from './Navbar';
+import { Container, Row, Col } from 'reactstrap';
+
 
 export class Portfolio extends Component {
     constructor(props) {
@@ -13,7 +16,10 @@ export class Portfolio extends Component {
     render() {
         return (
             <div>
-                <h1>Portfolio</h1>
+                <Navbar />
+                <Container fluid className="pageContainer portfolioContainer text-center">
+                    <h1>Portfolio</h1>
+                </Container>
             </div>
         )
     }

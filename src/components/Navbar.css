@@ -5,7 +5,7 @@ nav {
     top: 0;
     padding: 0 30px;
     background-color: var(--secondary-colour);
-    z-index: 110;
+    z-index: 100;
 }
 
 .brandLink:hover {
@@ -28,7 +28,23 @@ button:focus {
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color: rgba(65, 82, 111, 0.71);
+    background-color: rgba(65, 82, 111, 0.9);
     transition: 0.7s;
-    z-index: 100;
+    z-index: 200;
+    overflow: hidden;
+}
+
+.menuList {
+    list-style-type: none;
+}
+
+.menuLink {
+    font-size: 4.5rem;
+    color: var(--primary-colour);
+    transition: 0.7s;
+}
+
+.menuLink:hover {
+    color: white;
+    text-decoration: none;
 }

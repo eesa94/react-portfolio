@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { Minus } from 'react-burgers';
+import onClickOutside from 'react-onclickoutside';
 
 class Navbar extends Component {
     constructor(props) {
@@ -36,6 +37,14 @@ class Navbar extends Component {
         });
     }
 
+    handleClickOutside = () => {
+        if (this.state.active === true) {
+            this.toggleBurger();
+        } else {
+            return;
+        }
+    }
+
     render() {
 
         return (
@@ -52,11 +61,34 @@ class Navbar extends Component {
                         active={this.state.active} 
                         onClick={() => { this.toggleBurger(); this.openMenu(); }} />
                 </nav>
-                <div className="menuContainer" style={this.state} >
+
+                <div className="menuContainer" onBlur={(e) => { e.preventDefault(); }} style={this.state}>
+                    <ul className="menuList h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+                        <li className="menuListItem">
+                            <Link to='/' className="menuLink montserrat-9">
+                                Home
+                            </Link>
+                        </li>
+                        <li className="menuListItem">
+                            <Link to='/about' className="menuLink montserrat-9">
+                                About
+                            </Link>
+                        </li>
+                        <li className="menuListItem">
+                            <Link to='/portfolio' className="menuLink montserrat-9">
+                                Portfolio
+                            </Link>
+                        </li>
+                        <li className="menuListItem">
+                            <Link to='/contact' className="menuLink montserrat-9">
+                                Contact
+                            </Link>
+                        </li>
+                    </ul>
                 </div>
             </div>
         )
     }
 }
 
-export default Navbar
+export default onClickOutside(Navbar)
