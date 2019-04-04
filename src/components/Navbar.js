@@ -44,9 +44,6 @@ class Navbar extends Component {
         }
     }
 
-    menuClick = (e) => {
-        e.preventDefault();
-    }
 
     render() {
 

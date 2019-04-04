@@ -44,15 +44,22 @@ button:focus {
 
 .menuListItem {
     margin-right: 30px;
+    transition: 0.5s;
+    border-bottom: 3px solid var(--secondary-colour);
+}
+
+.menuListItem:hover {
+    border-bottom: 3px solid var(--primary-colour);
 }
 
 .menuLink {
     font-size: 2rem;
     color: var(--primary-colour);
     transition: 0.7s;
+    margin-bottom: 3px;
 }
 
 .menuLink:hover {
-    color: white;
+    color: var(--primary-colour);
     text-decoration: none;
 }
