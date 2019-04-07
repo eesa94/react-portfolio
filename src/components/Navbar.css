@@ -48,18 +48,27 @@ button:focus {
     border-bottom: 3px solid var(--secondary-colour);
 }
 
-.menuListItem:hover {
-    border-bottom: 3px solid var(--primary-colour);
+.menuListItemActive {
+    border-bottom: 3px solid #fd5df7;
 }
+
+/* .menuListItem:hover {
+    border-bottom: 3px solid #fd5df7;
+} */
 
 .menuLink {
     font-size: 2rem;
     color: var(--primary-colour);
-    transition: 0.7s;
+    transition: 0.5s;
     margin-bottom: 3px;
 }
 
 .menuLink:hover {
-    color: var(--primary-colour);
+    color: #fd5df7;
     text-decoration: none;
 }
+
+
+li.navigation--active {
+    text-decoration: underline;
+  }

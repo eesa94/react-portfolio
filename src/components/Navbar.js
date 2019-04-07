@@ -8,42 +8,37 @@ class Navbar extends Component {
         super(props)
 
         this.state = {
-            active: false,
-            top: '-200%'
+            links: [
+                'Home',
+                'About',
+                'Portfolio',
+                'Contact'
+            ],
+            activeLink: -1
         }
+
     }
-    
-    
-    openMenu = () => {
+
+    handleMouseEnter(index) {
+        console.log('mouse enter');
+
         this.setState({
-            top: '0'
+            activeLink: index
         }, () => {
-            document.addEventListener('click', this.closeMenu);
-        });
-    }
-    
-    closeMenu = () => {
-        this.setState({
-            top: '-200%'
-        }, () => {
-            document.removeEventListener('click', this.closeMenu);
-        });
-    }
-    
-    toggleBurger = () => {
-        this.setState({
-            active: !this.state.active
+            document.addEventListener('mouseleave', this.handleMouseLeave);
         });
     }
 
-    handleClickOutside = () => {
-        if (this.state.active === true) {
-            this.toggleBurger();
-        } else {
-            return;
-        }
-    }
+    handleMouseLeave = () => {
+        console.log('mouse leave');
 
+        this.setState({
+            activeLink: -1
+        }, () => {
+            document.removeEventListener('mouseleave', this.handleMouseLeave);
+        });
+    }
+    
 
     render() {
 
@@ -57,32 +52,32 @@ class Navbar extends Component {
                 </div>
 
                 <ul className="menuList h-100 d-flex flex-row justify-content-center align-items-center">
-                    <li className="menuListItem">
-                        <Link to='/' className="menuLink montserrat-5">
-                            Home
-                        </Link>
-                    </li>
-                    <li className="menuListItem">
-                        <Link to='/about' className="menuLink montserrat-5">
-                            About
-                        </Link>
-                    </li>
-                    <li className="menuListItem">
-                        <Link to='/portfolio' className="menuLink montserrat-5">
-                            Portfolio
-                        </Link>
-                    </li>
-                    <li className="menuListItem">
-                        <Link to='/contact' className="menuLink montserrat-5">
-                            Contact
-                        </Link>
-                    </li>
-                </ul>
+                    {this.state.links.map((link, index) =>  
+                        <li
+                        key={index}
+                        className={this.state.activeLink === index ? 'menuListItem menuListItemActive' : 'menuListItem'}
+                        onMouseEnter={this.handleMouseEnter.bind(this, index)}
+                        onMouseLeave={this.handleMouseLeave.bind(this)}
+                        >
+                            {
+                                index === 0 ? 
+                                    <Link to={'/'} className="menuLink montserrat-5">
+                                        Home
+                                    </Link>  
+                                : 
+                                    <Link to={'/' + link} className="menuLink montserrat-5">
+                                        {link}
+                                    </Link>
+                            }    
 
+                            
+                        </li>
+                    )}
+                </ul>
             </nav>
         
         )
     }
 }
 
-export default onClickOutside(Navbar)
+export default Navbar
