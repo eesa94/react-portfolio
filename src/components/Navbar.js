@@ -20,8 +20,6 @@ class Navbar extends Component {
     }
 
     handleMouseEnter(index) {
-        console.log('mouse enter');
-
         this.setState({
             activeLink: index
         }, () => {
@@ -30,8 +28,6 @@ class Navbar extends Component {
     }
 
     handleMouseLeave = () => {
-        console.log('mouse leave');
-
         this.setState({
             activeLink: -1
         }, () => {
