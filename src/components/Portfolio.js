@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
-import { Container, Row } from 'reactstrap';
+import { Container } from 'reactstrap';
 import './Portfolio.css';
 import Project from './Project';
+import wallhaven634721 from '../img/wallhaven634721.jpg';
 
 
 export class Portfolio extends Component {
@@ -12,14 +13,11 @@ export class Portfolio extends Component {
         this.state = {
             projects: [
                 {
-                    name: "Project 1",
-                    url: "",
-                    github: "",                    
-                },
-                {
-                    name: "Project 2",
-                    url: "",
-                    github: "",                    
+                    name: "Apex Automotive",
+                    image: `url(${wallhaven634721})`,
+                    description: "Everyday carry hella vice, hexagon yuccie affogato bicycle rights. Kale chips blue bottle direct trade humblebrag chambray vexillologist next level PBR&B gluten-free squid tofu man braid selfies. 3 wolf moon man braid chia fixie next level poutine, wolf gentrify photo booth cloud bread. Vinyl pug pabst artisan. Kinfolk tilde humblebrag, fanny pack +1 kale chips master cleanse bushwick hashtag.",                    
+                    url: "https://apexautomotive.netlify.com/",
+                    github: "https://github.com/eesa94/automotive",
                 },
             ]
         }
@@ -32,15 +30,17 @@ export class Portfolio extends Component {
                 <Navbar />
                 <Container fluid className="pageContainer portfolioContainer text-center">
                     <h1 className="montserrat-9 mb3">Portfolio</h1>
-                    <Row noGutters>
-                        {
-                            this.state.projects.map(project => 
-                               <Project 
-                                    name={project.name}
-                                />
-                            )
-                        }
-                    </Row>
+                    {
+                        this.state.projects.map(project => 
+                            <Project 
+                                name={project.name}
+                                image={project.image}
+                                description={project.description}
+                                url={project.url}
+                                github={project.github}
+                            />
+                        )
+                    }
                 </Container>
             </div>
         )
