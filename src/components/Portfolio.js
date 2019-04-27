@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
-import { Container, Row, Col } from 'reactstrap';
-import './Portfolio.css'
+import { Container, Row } from 'reactstrap';
+import './Portfolio.css';
+import Project from './Project';
 
 
 export class Portfolio extends Component {
@@ -34,13 +35,9 @@ export class Portfolio extends Component {
                     <Row noGutters>
                         {
                             this.state.projects.map(project => 
-                                <Col xs="12" lg="6">
-                                    <div className="projectSquare">
-                                        <div className="projectOverlay h-100 w-100 d-flex justify-content-center align-items-center">
-                                            <h1 className="projectTitle">{project.name}</h1>
-                                        </div>
-                                    </div>
-                                </Col>
+                               <Project 
+                                    name={project.name}
+                                />
                             )
                         }
                     </Row>
