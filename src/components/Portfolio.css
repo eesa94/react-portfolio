@@ -1,0 +1,9 @@
+.portfolioContainer {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.projectSquare {
+    height: 400px;
+    background-color: cyan;
+}
