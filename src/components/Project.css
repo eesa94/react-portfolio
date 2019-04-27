@@ -2,6 +2,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    box-shadow: 0px 0px 5px 1px var(--secondary-colour);
 }
 
 .projectOverlay {
@@ -31,7 +32,7 @@
 }
 
 .projectLink:hover {
-    color: #fff;
+    color: #fff!important;
     background-color: var(--secondary-colour);
     border: 2px solid var(--secondary-colour);
 }
@@ -43,15 +44,6 @@
 .projectLinkActive {
     opacity: 1;
 }
-
-.projectInformationCol {
-    /* margin-left: -100px; */
-    transition: 0.6s;
-}
-
-/* .projectInformationColActive {
-    margin-left: -40px;
-} */
 
 .projectInformation {
     padding: 10px;

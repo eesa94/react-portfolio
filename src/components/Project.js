@@ -31,11 +31,6 @@ export class Project extends Component {
         })
     }
 
-    componentDidMount() {
-        console.log(this.props.index)
-    }
-    
-
     render() {
 
         const projectImage = {
@@ -61,8 +56,8 @@ export class Project extends Component {
                             </div>
                         </div>
                     </Col>        
-                    <Col xs="12" lg={{ size: 5, offset: 0, order: 2}} style={{ marginLeft: '-3.5%', zIndex: 10 }}>
-                        <div className="h-100 w-100 d-flex justify-content-center align-items-start flex-column">
+                    <Col xs="12" lg={{size: 4, offset: 0, order: 2}}>
+                        <div className="h-100 w-100 d-flex justify-content-center align-items-start flex-column position-relative" style={this.state.active ? {left: '-1%', transition: '0.5s', zIndex: 10} : {left: '-10%', transition: '0.5s', zIndex: 10}}>
                             <div className="projectInformation">
                                 <h1 className="projectTitle montserrat-7 mb2 text-left">{this.props.name}</h1>
                                 <p className="projectDescription montserrat-5 text-left">{this.props.description}</p>
@@ -74,7 +69,7 @@ export class Project extends Component {
         } else {
             return (
                 <Row noGutters className="projectRow mb2">
-                    <Col xs="12" lg={{size: 5, offset: 0, order: 2}} style={{ marginLeft: '-3.5%'}}>
+                    <Col xs="12" lg={{size: 5, offset: 0, order: 2}}>
                         <div 
                             className="projectImage h-100 w-100 d-flex justify-content-center align-items-center" 
                             style={projectImage}
@@ -88,8 +83,8 @@ export class Project extends Component {
                             </div>
                         </div>
                     </Col>        
-                    <Col xs="12" lg={{ size: 5, offset: 1, order: 1}} style={{ zIndex: 10 }}>
-                        <div className="h-100 w-100 d-flex justify-content-center align-items-start flex-column">
+                    <Col xs="12" lg={{size: 4, offset: 2, order: 1}}>
+                        <div className="h-100 w-100 d-flex justify-content-center align-items-start flex-column position-relative"  style={this.state.active ? {right: '-1%', transition: '0.5s', zIndex: 10} : {right: '-10%', transition: '0.5s', zIndex: 10}}>
                             <div className="projectInformation">
                                 <h1 className="projectTitle montserrat-7 mb2 text-left">{this.props.name}</h1>
                                 <p className="projectDescription montserrat-5 text-left">{this.props.description}</p>
