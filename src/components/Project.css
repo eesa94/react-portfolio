@@ -45,13 +45,13 @@
 }
 
 .projectInformationCol {
-    margin-left: -100px;
+    /* margin-left: -100px; */
     transition: 0.6s;
 }
 
-.projectInformationColActive {
+/* .projectInformationColActive {
     margin-left: -40px;
-}
+} */
 
 .projectInformation {
     padding: 10px;
