@@ -45,6 +45,34 @@
     opacity: 1;
 }
 
+.projectInformationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.rightInactive {
+    left: -10%;
+}
+
+.rightActive {
+    left: -1%;
+}
+
+.leftInactive {
+    right: -10%;
+}
+
+.leftActive {
+    right: -1%;
+}
+
 .projectInformation {
     padding: 10px;
     background-color: var(--primary-colour);
