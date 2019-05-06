@@ -33,9 +33,11 @@ export class Project extends Component {
 
     render() {
 
-        const projectImage = {
+        const projectBackgroundImage = {
             backgroundImage: this.props.image
         }
+
+        const projectImageClass = this.state.active ? "projectImage projectImageActive" : "projectImage" ;
 
         const projectInformationClassRight = this.state.active ?  "rightActive projectInformationContainer" : "rightInactive projectInformationContainer";
 
@@ -46,8 +48,8 @@ export class Project extends Component {
                 <Row noGutters className="projectRow mb2">
                     <Col xs="12" lg={{size: 5, offset: 1, order: 1}}>
                         <div 
-                            className="projectImage h-100 w-100 d-flex justify-content-center align-items-center" 
-                            style={projectImage}
+                            className={projectImageClass} 
+                            style={projectBackgroundImage}
                             onMouseEnter={this.mouseEnter}
                             onMouseLeave={this.mouseLeave}
                         >
@@ -73,8 +75,8 @@ export class Project extends Component {
                 <Row noGutters className="projectRow mb2">
                     <Col xs="12" lg={{size: 5, offset: 0, order: 2}}>
                         <div 
-                            className="projectImage h-100 w-100 d-flex justify-content-center align-items-center" 
-                            style={projectImage}
+                            className={projectImageClass} 
+                            style={projectBackgroundImage}
                             onMouseEnter={this.mouseEnter}
                             onMouseLeave={this.mouseLeave}
                         >

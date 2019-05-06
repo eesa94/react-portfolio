@@ -5,6 +5,7 @@ import './Portfolio.css';
 import Project from './Project';
 import wallhaven634721 from '../img/wallhaven634721.jpg';
 import gimbap from '../img/gimbap.jpg';
+import eurobiketourss from '../img/eurobiketourss.jpg'
 
 
 export class Portfolio extends Component {
@@ -26,6 +27,13 @@ export class Portfolio extends Component {
                     description: "Everyday carry hella vice, hexagon yuccie affogato bicycle rights. Kale chips blue bottle direct trade humblebrag chambray vexillologist next level PBR&B gluten-free squid tofu man braid selfies. 3 wolf moon man braid chia fixie next level poutine, wolf gentrify photo booth cloud bread. Vinyl pug pabst artisan. Kinfolk tilde humblebrag, fanny pack +1 kale chips master cleanse bushwick hashtag.",                    
                     url: "https://seoulfood.netlify.com/",
                     github: "https://github.com/eesa94/restaurant",
+                },
+                {
+                    name: "Euro Bike Tours",
+                    image: `url(${eurobiketourss})`,
+                    description: "Everyday carry hella vice, hexagon yuccie affogato bicycle rights. Kale chips blue bottle direct trade humblebrag chambray vexillologist next level PBR&B gluten-free squid tofu man braid selfies. 3 wolf moon man braid chia fixie next level poutine, wolf gentrify photo booth cloud bread. Vinyl pug pabst artisan. Kinfolk tilde humblebrag, fanny pack +1 kale chips master cleanse bushwick hashtag.",                    
+                    url: "https://eurobiketours.herokuapp.com/",
+                    github: "https://github.com/eesa94/eurobiketours",
                 },
             ]
         }
