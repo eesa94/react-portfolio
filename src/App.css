@@ -72,6 +72,12 @@ a:hover {
     margin-bottom: 30px;
 }
 
+
+/* Common components */
 .pageContainer {
     padding-top: 100px;
+}
+
+.pageHeader {
+    font-size: 4rem;
 }

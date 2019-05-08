@@ -19,7 +19,7 @@ export class About extends Component {
             <div>
                 <Navbar />
                 <Container fluid className="pageContainer aboutContainer text-center">
-                    <h1 className="montserrat-9 mb3">About Me</h1>
+                    <h1 className="pageHeader montserrat-9 mb3">About Me</h1>
                     <Row>
                         <Col
                         xs={{ size: 10, offset: 1 }}
@@ -32,8 +32,14 @@ export class About extends Component {
                                     <h2 className="montserrat-7">Background</h2>
                                 </CardHeader>
                                 <CardBody>
-                                    <CardText>
-                                        <p className="montserrat-5 mb1">I am a front end dev</p>
+                                    <CardText className="montserrat-5 mb1">
+                                        <i className="fas fa-map-marker-alt"></i>I am a Front End Developer, with a focus on React and UI development.
+                                    </CardText>
+                                    <CardText className="montserrat-5 mb1">
+                                        <i className="fas fa-briefcase"></i>I currently work for a digital consultancy in Leeds.
+                                    </CardText>
+                                    <CardText className="montserrat-5 mb1">
+                                        <i className="fas fa-code"></i>I have worked with the following technologies. In addition to these I am constantly learning and adding to my skill set.
                                     </CardText>
                                 </CardBody>
                             </Card>
@@ -49,9 +55,22 @@ export class About extends Component {
                                     <h2 className="montserrat-7">Skills</h2>
                                 </CardHeader>
                                 <CardBody>
-                                    <CardText>
-                                        <p className="montserrat-5 mb1">These are my skillz</p>
-                                    </CardText>
+                                    <Row>
+                                        <Col xs="6">
+                                            <h2 className="montserrat-6">Front End</h2>
+                                            <CardText className="text-center montserrat-5 mb1">HTML</CardText>
+                                            <CardText className="text-center montserrat-5 mb1">CSS</CardText>
+                                            <CardText className="text-center montserrat-5 mb1">Bootstrap</CardText>
+                                            <CardText className="text-center montserrat-5 mb1">JavaScript</CardText>
+                                            <CardText className="text-center montserrat-5 mb1">React</CardText>
+                                        </Col>
+                                        <Col xs="6">
+                                            <h2 className="montserrat-6">Back End</h2>
+                                            <CardText className="text-center montserrat-5 mb1">Ruby</CardText>
+                                            <CardText className="text-center montserrat-5 mb1">Ruby on Rails</CardText>
+                                            <CardText className="text-center montserrat-5 mb1">Firebase</CardText>
+                                        </Col>
+                                    </Row>
                                 </CardBody>
                             </Card>
                         </Col>
@@ -66,7 +85,6 @@ export class About extends Component {
                                 </CardHeader>
                                 <CardBody>
                                     <CardText>
-                                        <p className="montserrat-5 mb1">random shite</p>
                                     </CardText>
                                 </CardBody>
                             </Card>

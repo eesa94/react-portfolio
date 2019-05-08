@@ -63,7 +63,8 @@ export class Project extends Component {
                     <Col xs="12" lg={{size: 4, offset: 0, order: 2}}>
                         <div className={projectInformationClassRight}>
                             <div className="projectInformation">
-                                <h1 className="projectTitle montserrat-7 mb2 text-left">{this.props.name}</h1>
+                                <h1 className="projectTitle montserrat-7 text-left">{this.props.name}</h1>
+                                <div className="projectTitleUnderline mb2"></div>
                                 <p className="projectDescription montserrat-5 text-left">{this.props.description}</p>
                             </div>
                         </div>
@@ -90,7 +91,8 @@ export class Project extends Component {
                     <Col xs="12" lg={{size: 4, offset: 2, order: 1}}>
                         <div className={projectInformationClassLeft}>
                             <div className="projectInformation">
-                                <h1 className="projectTitle montserrat-7 mb2 text-left">{this.props.name}</h1>
+                                <h1 className="projectTitle montserrat-7 text-left">{this.props.name}</h1>
+                                <div className="projectTitleUnderline mb2"></div>
                                 <p className="projectDescription montserrat-5 text-left">{this.props.description}</p>
                             </div>
                         </div>

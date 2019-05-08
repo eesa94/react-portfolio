@@ -45,7 +45,7 @@ export class Portfolio extends Component {
             <div>
                 <Navbar />
                 <Container fluid className="pageContainer portfolioContainer text-center">
-                    <h1 className="montserrat-9 mb3">Portfolio</h1>
+                    <h1 className="pageHeader montserrat-9 mb3">Portfolio</h1>
                     {
                         this.state.projects.map((project, index) => 
                             <Project 
