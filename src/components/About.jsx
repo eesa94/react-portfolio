@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Navbar from './Navbar';
 import { Container, Row, Col, Card, CardHeader, CardBody, CardText } from 'reactstrap';
 import './About.css'
+import {Footer} from './Footer'
 
 
 export class About extends Component {
@@ -84,13 +85,36 @@ export class About extends Component {
                                     <h2 className="montserrat-7">FAQ</h2>
                                 </CardHeader>
                                 <CardBody>
-                                    <CardText>
+                                    <CardText className="montserrat-5">
+                                        <i class="fas fa-question"></i>
+                                        How did you become a web developer
+                                    </CardText>
+                                    <CardText className="montserrat-5 mb3">
+                                        <i class="fas fa-check"></i>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, hic quod vitae quos nihil velit recusandae voluptatibus ut quaerat aut ex similique tempore quae cumque tenetur accusantium itaque. Totam, iure.
+                                    </CardText>
+                                    <CardText className="montserrat-5">
+                                        <i class="fas fa-question"></i>
+                                        What is your development process
+                                    </CardText>
+                                    <CardText className="montserrat-5 mb3">
+                                        <i class="fas fa-check"></i>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, hic quod vitae quos nihil velit recusandae voluptatibus ut quaerat aut ex similique tempore quae cumque tenetur accusantium itaque. Totam, iure.
+                                    </CardText>
+                                    <CardText className="montserrat-5">
+                                        <i class="fas fa-question"></i>
+                                        What do you most/least enjoy about web development
+                                    </CardText>
+                                    <CardText className="montserrat-5 mb3">
+                                        <i class="fas fa-check"></i>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, hic quod vitae quos nihil velit recusandae voluptatibus ut quaerat aut ex similique tempore quae cumque tenetur accusantium itaque. Totam, iure.
                                     </CardText>
                                 </CardBody>
                             </Card>
                         </Col>
                     </Row>
                 </Container>
+                <Footer/>
             </div>
         )
     }

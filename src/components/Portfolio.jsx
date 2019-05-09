@@ -6,6 +6,8 @@ import Project from './Project';
 import wallhaven634721 from '../img/wallhaven634721.jpg';
 import gimbap from '../img/gimbap.jpg';
 import eurobiketourss from '../img/eurobiketourss.jpg'
+import {Footer} from './Footer'
+
 
 
 export class Portfolio extends Component {
@@ -60,6 +62,7 @@ export class Portfolio extends Component {
                         )
                     }
                 </Container>
+                <Footer/>
             </div>
         )
     }

@@ -76,6 +76,7 @@ a:hover {
 /* Common components */
 .pageContainer {
     padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 .pageHeader {
