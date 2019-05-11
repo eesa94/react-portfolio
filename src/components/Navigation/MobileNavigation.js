@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
-import MobileNavigationMenu from './MobileNavigationMenu';
+import MobileNavigationMenu from './MobileNavigationMenu'
+import { Minus } from 'react-burgers';
 
 
 export class MobileNavigation extends Component {
@@ -9,7 +10,8 @@ export class MobileNavigation extends Component {
         super(props)
 
         this.state = {
-            menuOpen: false
+            menuOpen: false,
+            active: false
         }
 
         this.toggleMenu=this.toggleMenu.bind(this);
@@ -22,20 +24,33 @@ export class MobileNavigation extends Component {
         })
     }
 
+    toggleBurger = () => {
+        this.setState({
+            active: !this.state.active
+        })
+    }
+
 
     render() {
         return (
-            <div className="h-100">
                 <div className="mobileNavigation d-flex flex-row justify-content-between align-items-center h-100">
                     <div className="brandContainer">
                         <Link to='/' className="brandLink">
                             <h1 className="brandName montserrat-6">Eesa Patel.</h1>
                         </Link>
                     </div>
-                    <button onClick={this.toggleMenu} className="btn btn-primary">Menu</button>
+                    <Minus
+                        width={30}
+                        lineHeight={3}
+                        lineSpacing={4}
+                        padding='5px'
+                        color='var(--primary-colour)'
+                        className="burger" 
+                        active={this.state.active} 
+                        onClick={() => { this.toggleBurger(); this.toggleMenu(); }}
+                        />
+                    <MobileNavigationMenu menuOpen={this.state.menuOpen} links={this.props.links} />
                 </div>
-                <MobileNavigationMenu menuOpen={this.state.menuOpen} links={this.props.links} />
-            </div>
         )
     }
 }

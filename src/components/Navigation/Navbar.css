@@ -51,7 +51,6 @@ button:focus {
 }
 
 .menuListItem {
-    margin: 3px 30px 0 0;
     transition: 0.5s;
 }
 
@@ -88,5 +87,9 @@ button:focus {
 
     .brandName {
         font-size: 4.5rem;
+    }
+
+    .menuListItem {
+        margin: 3px 30px 0 0;
     }
 }
