@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from './Navbar';
+import Navbar from './Navigation/Navbar';
 import { Container } from 'reactstrap';
 import './Portfolio.css';
 import Project from './Project';

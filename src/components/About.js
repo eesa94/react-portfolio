@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Navbar from './Navbar';
+import Navbar from './Navigation/Navbar';
 import { Container, Row, Col, Card, CardHeader, CardBody, CardText } from 'reactstrap';
 import './About.css'
 import {Footer} from './Footer'
