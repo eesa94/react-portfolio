@@ -1,5 +1,5 @@
 nav {
-    height: 80px;
+    height: 50px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -13,7 +13,7 @@ nav {
 }
 
 .brandName {
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     margin: 0 20px 0 0;
     color: var(--primary-colour);
 }
@@ -40,6 +40,14 @@ button:focus {
     margin-bottom: 0;
     margin-block-start: 0;
     margin-block-end: 0;
+}
+
+.menuListMobile {
+    position: fixed;
+    top: 50px;
+    padding: 50px 0;
+    background-color: rgba(65, 82, 111, 0.9);
+    transition: 0.5s;
 }
 
 .menuListItem {
@@ -71,4 +79,14 @@ button:focus {
 
 .linkUnderlineActive {
     width: 80%;
+}
+
+@media  (min-width: 768px) {
+    nav {
+        height: 80px;
+    }
+
+    .brandName {
+        font-size: 4.5rem;
+    }
 }

@@ -86,27 +86,27 @@ export class About extends Component {
                                 </CardHeader>
                                 <CardBody>
                                     <CardText className="montserrat-5">
-                                        <i class="fas fa-question"></i>
+                                        <i className="fas fa-question"></i>
                                         How did you become a web developer
                                     </CardText>
                                     <CardText className="montserrat-5 mb3">
-                                        <i class="fas fa-check"></i>
+                                        <i className="fas fa-check"></i>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, hic quod vitae quos nihil velit recusandae voluptatibus ut quaerat aut ex similique tempore quae cumque tenetur accusantium itaque. Totam, iure.
                                     </CardText>
                                     <CardText className="montserrat-5">
-                                        <i class="fas fa-question"></i>
+                                        <i className="fas fa-question"></i>
                                         What is your development process
                                     </CardText>
                                     <CardText className="montserrat-5 mb3">
-                                        <i class="fas fa-check"></i>
+                                        <i className="fas fa-check"></i>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, hic quod vitae quos nihil velit recusandae voluptatibus ut quaerat aut ex similique tempore quae cumque tenetur accusantium itaque. Totam, iure.
                                     </CardText>
                                     <CardText className="montserrat-5">
-                                        <i class="fas fa-question"></i>
+                                        <i className="fas fa-question"></i>
                                         What do you most/least enjoy about web development
                                     </CardText>
                                     <CardText className="montserrat-5 mb3">
-                                        <i class="fas fa-check"></i>
+                                        <i className="fas fa-check"></i>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, hic quod vitae quos nihil velit recusandae voluptatibus ut quaerat aut ex similique tempore quae cumque tenetur accusantium itaque. Totam, iure.
                                     </CardText>
                                 </CardBody>

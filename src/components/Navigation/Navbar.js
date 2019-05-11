@@ -23,10 +23,10 @@ class Navbar extends Component {
         return (
 
             <nav>
-                <MediaQuery maxWidth={991}>
+                <MediaQuery maxWidth={767}>
                     <MobileNavigation links={this.state.links} />
                 </MediaQuery>
-                <MediaQuery minWidth={992}>
+                <MediaQuery minWidth={768}>
                     <DesktopNavigation links={this.state.links} />
                 </MediaQuery>
             </nav>
