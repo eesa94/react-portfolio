@@ -40,9 +40,9 @@ export class Project extends Component {
     const parallaxData = [
       {
         start: 'self',
-        startOffset: '10vw',
+        startOffset: '1px',
         end: 'self',
-        endOffset: '50vh',
+        endOffset: '70vh',
         easing: 'easeInOutBack',
         properties: [
           {
@@ -50,20 +50,17 @@ export class Project extends Component {
             endValue: 1.1,
             property: 'scale',
             unit: ''
-          }
-        ]
-      },
-      {
-        start: 'self',
-        startOffset: '60vh',
-        end: 'self',
-        endOffset: '100vh',
-        easing: 'easeInOutBack',
-        properties: [
+          },
           {
-            startValue: 1.1,
+            startValue: 1.5,
+            endValue: 0,
+            property: 'blur',
+            unit: ''
+          },
+          {
+            startValue: 0,
             endValue: 1,
-            property: 'scale',
+            property: 'opacity',
             unit: ''
           }
         ]
@@ -89,9 +86,9 @@ export class Project extends Component {
     if (this.props.index % 2 === 0) {
       return (
         <div>
-          <div style={{ height: '15vh' }} />
+          <div style={{ height: '10vh' }} />
           <Row noGutters className='projectRow'>
-            <Col xs='12' lg={{ size: 5, offset: 1, order: 1 }}>
+            <Col xs='12' lg={{ size: 6, offset: 1, order: 1 }}>
               <Plx
                 style={{
                   height: '100%',
@@ -156,16 +153,16 @@ export class Project extends Component {
               </Plx>
             </Col>
           </Row>
-          <div style={{ height: '30vh' }} />
+          <div style={{ height: '10vh' }} />
         </div>
       );
     } else {
       return (
         <div>
-          <div style={{ height: '15vh' }} />
+          <div style={{ height: '10vh' }} />
 
           <Row noGutters className='projectRow'>
-            <Col xs='12' lg={{ size: 5, offset: 0, order: 2 }}>
+            <Col xs='12' lg={{ size: 6, offset: 0, order: 2 }}>
               <Plx
                 style={{
                   height: '100%',
@@ -201,7 +198,7 @@ export class Project extends Component {
                 </div>
               </Plx>
             </Col>
-            <Col xs='12' lg={{ size: 4, offset: 2, order: 1 }}>
+            <Col xs='12' lg={{ size: 4, offset: 1, order: 1 }}>
               <Plx
                 style={{
                   height: '100%',
@@ -223,7 +220,7 @@ export class Project extends Component {
               </Plx>
             </Col>
           </Row>
-          <div style={{ height: '20vh' }} />
+          <div style={{ height: '10vh' }} />
         </div>
       );
     }
