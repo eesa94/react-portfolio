@@ -16,8 +16,61 @@ export class About extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      skills: [
+        {
+          name: 'HTML',
+          iconClass: 'fab fa-html5',
+          nameColor: 'orange',
+          iconColor: 'orange',
+          backgroundColor: 'white'
+        },
+        {
+          name: 'JavaScript',
+          iconClass: 'fab fa-js',
+          nameColor: 'yellow',
+          iconColor: 'yellow',
+          backgroundColor: 'black'
+        },
+        {
+          name: 'React JS',
+          iconClass: 'fab fa-react',
+          nameColor: 'white',
+          iconColor: 'lightblue',
+          backgroundColor: 'darkblue'
+        }
+      ],
+      hoveredSkill: -1
+    };
   }
+
+  handleMouseEnter = (index) => {
+    this.setState(
+      {
+        hoveredSkill: index
+      },
+      () => {
+        document.addEventListener('mouseleave', this.handleMouseLeave);
+      }
+    );
+    console.log(
+      `entered box ${index}, hoveredSkill set to ${this.state.hoveredSkill}`
+    );
+  };
+
+  handleMouseLeave = (index) => {
+    this.setState(
+      {
+        hoveredSkill: -1
+      },
+      () => {
+        document.removeEventListener('mouseleave', this.handleMouseLeave);
+      }
+    );
+    console.log(
+      `left box ${index}, hoveredSkill set to ${this.state.hoveredSkill}`
+    );
+  };
 
   render() {
     return (
@@ -144,6 +197,38 @@ export class About extends Component {
                   </CardText>
                 </CardBody>
               </Card>
+            </Col>
+          </Row>
+        </Container>
+        <Container className='skillsContainer'>
+          <Row>
+            <Col xs={{ size: 6, offset: 3 }}>
+              <Row noGutters style={{ height: '180px' }}>
+                {this.state.skills.map((skill, index) => (
+                  <Col
+                    xs='4'
+                    key={index}
+                    onMouseEnter={this.handleMouseEnter.bind(this, index)}
+                    onMouseLeave={this.handleMouseLeave.bind(this, index)}
+                  >
+                    <div
+                      className='skillSquare'
+                      style={{ backgroundColor: skill.backgroundColor }}
+                    >
+                      <span
+                        className='skillName'
+                        style={{ color: skill.nameColor }}
+                      >
+                        {skill.name}
+                      </span>
+                      <i
+                        className={'skillIcon ' + skill.iconClass}
+                        style={{ color: skill.iconColor }}
+                      />
+                    </div>
+                  </Col>
+                ))}
+              </Row>
             </Col>
           </Row>
         </Container>
