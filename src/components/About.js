@@ -12,7 +12,51 @@ import {
 import './About.css';
 import { Footer } from './Footer';
 
-export class About extends Component {
+const styles = {
+  skillsContainer: {
+    marginBottom: '100px'
+  },
+  skillSquare: {
+    position: 'relative',
+    height: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '5px 15px',
+    border: '1px solid black',
+    overflow: 'hidden',
+  },
+  skillName: {
+    position: 'absolute',
+    left: '3%',
+    top: '3%',
+    fontSize: '3rem',
+    opacity: 0,
+    transition: '0.8s'
+  },
+  skillIcon: {
+    position: 'relative',
+    bottom: '0%',
+    top: '0%',
+    left: '0%',
+    right: '0%',
+    fontSize: '12rem',
+    transition: '1s'
+  }
+}
+
+const hoverStyles = {
+  skillName: {
+    opacity: 1
+  },
+  skillIcon: {
+    top: '50%',
+    left: '50%',
+    transform: 'rotate(30deg)'
+  },
+}
+
+class About extends Component {
   constructor(props) {
     super(props);
 
@@ -21,23 +65,20 @@ export class About extends Component {
         {
           name: 'HTML',
           iconClass: 'fab fa-html5',
-          nameColor: 'orange',
-          iconColor: 'orange',
-          backgroundColor: 'white'
+          primaryColor: 'orange',
+          secondaryColor: 'white'
         },
         {
           name: 'JavaScript',
           iconClass: 'fab fa-js',
-          nameColor: 'yellow',
-          iconColor: 'yellow',
-          backgroundColor: 'black'
+          primaryColor: 'yellow',
+          secondaryColor: 'black'
         },
         {
           name: 'React JS',
           iconClass: 'fab fa-react',
-          nameColor: 'white',
-          iconColor: 'lightblue',
-          backgroundColor: 'darkblue'
+          primaryColor: 'lightblue',
+          secondaryColor: 'darkblue'
         }
       ],
       hoveredSkill: -1
@@ -54,7 +95,7 @@ export class About extends Component {
       }
     );
     console.log(
-      `entered box ${index}, hoveredSkill set to ${this.state.hoveredSkill}`
+      `entered box ${index}, hoveredSkill set to ${index}`
     );
   };
 
@@ -200,7 +241,7 @@ export class About extends Component {
             </Col>
           </Row>
         </Container>
-        <Container className='skillsContainer'>
+        <Container style={styles.skillsContainer}>
           <Row>
             <Col xs={{ size: 6, offset: 3 }}>
               <Row noGutters style={{ height: '180px' }}>
@@ -212,18 +253,20 @@ export class About extends Component {
                     onMouseLeave={this.handleMouseLeave.bind(this, index)}
                   >
                     <div
-                      className='skillSquare'
-                      style={{ backgroundColor: skill.backgroundColor }}
+                      style={styles.skillSquare}
+                      // style={this.state.hoveredSkill === index ? {backgroundColor: skill.primaryColor} : {backgroundColor: skill.secondaryColor}}
                     >
                       <span
-                        className='skillName'
-                        style={{ color: skill.nameColor }}
+                        style={this.state.hoveredSkill === index ? {...styles.skillName, ...hoverStyles.skillName} : styles.skillName}
+                        // style={this.state.hoveredSkill === index ? {color: skill.secondaryColor} : {color: skill.primaryColor}}
+
                       >
                         {skill.name}
                       </span>
                       <i
-                        className={'skillIcon ' + skill.iconClass}
-                        style={{ color: skill.iconColor }}
+                        className={skill.iconClass} style={this.state.hoveredSkill === index ? {...styles.skillIcon, ...hoverStyles.skillIcon} : styles.skillIcon}
+                        // style={this.state.hoveredSkill === index ? {color: skill.secondaryColor} : {color: skill.primaryColor}}
+
                       />
                     </div>
                   </Col>
