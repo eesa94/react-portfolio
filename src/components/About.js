@@ -23,17 +23,19 @@ const SkillSquare = styled.div`
   border-radius: 10%;
   overflow: hidden;
   transition: 0.3s;
-  background-color: --var(secondary-colour);
+  // background-color: --var(secondary-colour);
   // box-shadow: rgb(102, 196, 251) 0px 0px 8px;
 `;
 
 const SkillName = styled.span`
   position: absolute;
-  left: 3%;
-  top: 3%;
+  left: 10%;
+  top: 10%;
   font-family: Montserrat, sans-serif;
   font-weight: 600;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
+  color: var(--primary-colour);
+  letter-spacing: 1px;
   transition: 1s;
 `;
 
@@ -42,6 +44,7 @@ const SkillIcon = styled.i`
   top: 35%;
   left: 35%;
   font-size: 12rem;
+  color: var(--primary-colour);
   transition: 1s;
 `;
 
@@ -55,6 +58,11 @@ class About extends Component {
           name: 'HTML',
           iconClass: 'fab fa-html5',
           primaryColor: '#e34f26'
+        },
+        {
+          name: 'CSS',
+          iconClass: 'fab fa-css3-alt',
+          primaryColor: '#33a9dc'
         },
         {
           name: 'JavaScript',
@@ -235,20 +243,24 @@ class About extends Component {
                     key={index}
                     onMouseEnter={this.handleMouseEnter.bind(this, index)}
                     onMouseLeave={this.handleMouseLeave.bind(this, index)}
-                    style={{ paddingLeft: '5px', paddingRight: '5px' }}
+                    style={{
+                      paddingLeft: '5px',
+                      paddingRight: '5px',
+                      marginBottom: '10px'
+                    }}
                   >
                     <SkillSquare
                       style={
                         this.state.hoveredSkill === index
-                          ? { backgroundColor: skill.primaryColor }
-                          : { backgroundColor: 'var(--secondary-colour)' }
+                          ? { backgroundColor: 'rgba(0,0,0,1)' }
+                          : { backgroundColor: 'var(--secondary-colour' }
                       }
                     >
                       <SkillName
                         style={
                           this.state.hoveredSkill === index
-                            ? { opacity: 1 }
-                            : { opacity: 0 }
+                            ? { color: skill.primaryColor }
+                            : { color: 'var(--primary-colour' }
                         }
                       >
                         {skill.name}
@@ -257,8 +269,16 @@ class About extends Component {
                         className={skill.iconClass}
                         style={
                           this.state.hoveredSkill === index
-                            ? { transform: 'rotateY(180deg)' }
-                            : { transform: 'rotateY(360deg)' }
+                            ? {
+                                transform: 'rotateY(180deg)',
+                                color: skill.primaryColor,
+                                opacity: 1
+                              }
+                            : {
+                                transform: 'rotateY(360deg)',
+                                color: 'var(--primary-colour',
+                                opacity: 0.5
+                              }
                         }
                       />
                     </SkillSquare>
