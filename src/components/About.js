@@ -11,50 +11,39 @@ import {
 } from 'reactstrap';
 import './About.css';
 import { Footer } from './Footer';
+import styled from 'styled-components';
 
-const styles = {
-  skillsContainer: {
-    marginBottom: '100px'
-  },
-  skillSquare: {
-    position: 'relative',
-    height: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '5px 15px',
-    border: '1px solid black',
-    overflow: 'hidden',
-  },
-  skillName: {
-    position: 'absolute',
-    left: '3%',
-    top: '3%',
-    fontSize: '3rem',
-    opacity: 0,
-    transition: '0.8s'
-  },
-  skillIcon: {
-    position: 'relative',
-    bottom: '0%',
-    top: '0%',
-    left: '0%',
-    right: '0%',
-    fontSize: '12rem',
-    transition: '1s'
-  }
-}
+const SkillSquare = styled.div`
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px;
+  border-radius: 10%;
+  overflow: hidden;
+  transition: 0.3s;
+  background-color: --var(secondary-colour);
+  // box-shadow: rgb(102, 196, 251) 0px 0px 8px;
+`;
 
-const hoverStyles = {
-  skillName: {
-    opacity: 1
-  },
-  skillIcon: {
-    top: '50%',
-    left: '50%',
-    transform: 'rotate(30deg)'
-  },
-}
+const SkillName = styled.span`
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  transition: 1s;
+`;
+
+const SkillIcon = styled.i`
+  position: relative;
+  top: 35%;
+  left: 35%;
+  font-size: 12rem;
+  transition: 1s;
+`;
 
 class About extends Component {
   constructor(props) {
@@ -65,20 +54,17 @@ class About extends Component {
         {
           name: 'HTML',
           iconClass: 'fab fa-html5',
-          primaryColor: 'orange',
-          secondaryColor: 'white'
+          primaryColor: '#e34f26'
         },
         {
           name: 'JavaScript',
           iconClass: 'fab fa-js',
-          primaryColor: 'yellow',
-          secondaryColor: 'black'
+          primaryColor: '#F0DB4F'
         },
         {
           name: 'React JS',
           iconClass: 'fab fa-react',
-          primaryColor: 'lightblue',
-          secondaryColor: 'darkblue'
+          primaryColor: '#61dafb'
         }
       ],
       hoveredSkill: -1
@@ -94,9 +80,7 @@ class About extends Component {
         document.addEventListener('mouseleave', this.handleMouseLeave);
       }
     );
-    console.log(
-      `entered box ${index}, hoveredSkill set to ${index}`
-    );
+    console.log(`entered box ${index}, hoveredSkill set to ${index}`);
   };
 
   handleMouseLeave = (index) => {
@@ -241,7 +225,7 @@ class About extends Component {
             </Col>
           </Row>
         </Container>
-        <Container style={styles.skillsContainer}>
+        <Container style={{ marginBottom: '100px' }}>
           <Row>
             <Col xs={{ size: 6, offset: 3 }}>
               <Row noGutters style={{ height: '180px' }}>
@@ -251,24 +235,33 @@ class About extends Component {
                     key={index}
                     onMouseEnter={this.handleMouseEnter.bind(this, index)}
                     onMouseLeave={this.handleMouseLeave.bind(this, index)}
+                    style={{ paddingLeft: '5px', paddingRight: '5px' }}
                   >
-                    <div
-                      style={styles.skillSquare}
-                      // style={this.state.hoveredSkill === index ? {backgroundColor: skill.primaryColor} : {backgroundColor: skill.secondaryColor}}
+                    <SkillSquare
+                      style={
+                        this.state.hoveredSkill === index
+                          ? { backgroundColor: skill.primaryColor }
+                          : { backgroundColor: 'var(--secondary-colour)' }
+                      }
                     >
-                      <span
-                        style={this.state.hoveredSkill === index ? {...styles.skillName, ...hoverStyles.skillName} : styles.skillName}
-                        // style={this.state.hoveredSkill === index ? {color: skill.secondaryColor} : {color: skill.primaryColor}}
-
+                      <SkillName
+                        style={
+                          this.state.hoveredSkill === index
+                            ? { opacity: 1 }
+                            : { opacity: 0 }
+                        }
                       >
                         {skill.name}
-                      </span>
-                      <i
-                        className={skill.iconClass} style={this.state.hoveredSkill === index ? {...styles.skillIcon, ...hoverStyles.skillIcon} : styles.skillIcon}
-                        // style={this.state.hoveredSkill === index ? {color: skill.secondaryColor} : {color: skill.primaryColor}}
-
+                      </SkillName>
+                      <SkillIcon
+                        className={skill.iconClass}
+                        style={
+                          this.state.hoveredSkill === index
+                            ? { transform: 'rotateY(180deg)' }
+                            : { transform: 'rotateY(360deg)' }
+                        }
                       />
-                    </div>
+                    </SkillSquare>
                   </Col>
                 ))}
               </Row>
