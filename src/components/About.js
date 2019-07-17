@@ -20,11 +20,11 @@ const SkillSquare = styled.div`
   justify-content: center;
   align-items: center;
   padding: 5px 15px;
-  border-radius: 10%;
+  border-radius: 15px;
   overflow: hidden;
   transition: 0.3s;
   // background-color: --var(secondary-colour);
-  // box-shadow: rgb(102, 196, 251) 0px 0px 8px;
+  box-shadow: rgb(0, 0, 0) 2px 2px 3px 1px;
 `;
 
 const SkillName = styled.span`
@@ -65,6 +65,11 @@ class About extends Component {
           primaryColor: '#33a9dc'
         },
         {
+          name: 'Bootstrap',
+          iconClass: 'fab fa-bootstrap',
+          primaryColor: '#563d7c'
+        },
+        {
           name: 'JavaScript',
           iconClass: 'fab fa-js',
           primaryColor: '#F0DB4F'
@@ -73,6 +78,11 @@ class About extends Component {
           name: 'React JS',
           iconClass: 'fab fa-react',
           primaryColor: '#61dafb'
+        },
+        {
+          name: 'Git',
+          iconClass: 'fas fa-code-branch',
+          primaryColor: '#f54d27'
         }
       ],
       hoveredSkill: -1
