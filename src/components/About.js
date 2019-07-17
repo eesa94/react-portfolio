@@ -243,7 +243,7 @@ class About extends Component {
             </Col>
           </Row>
         </Container>
-        <Container style={{ marginBottom: '100px' }}>
+        <Container style={{ paddingBottom: '200px' }}>
           <Row>
             <Col xs={{ size: 6, offset: 3 }}>
               <Row noGutters style={{ height: '180px' }}>
