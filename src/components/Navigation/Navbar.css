@@ -1,100 +1,109 @@
 nav {
-  height: 50px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  padding: 0 50px;
-  background-color: var(--secondary-colour);
-  z-index: 100;
+	height: 50px;
+	top: 0;
+	padding: 0 50px;
+	background-color: var(--secondary-colour);
+	z-index: 100;
 }
 
 .brandLink:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .brandName {
-  font-size: 2.5rem;
-  margin: 0 20px 0 0;
-  color: var(--primary-colour);
+	font-size: 2.5rem;
+	margin: 0 20px 0 0;
+	color: var(--primary-colour);
 }
 
 button:focus {
-  outline: none;
+	outline: none;
 }
 
 .menuContainer {
-  position: absolute;
-  top: -200%;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  background-color: rgba(65, 82, 111, 0.9);
-  transition: 0.7s;
-  z-index: 200;
-  overflow: hidden;
+	position: absolute;
+	top: -200%;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(65, 82, 111, 0.9);
+	transition: 0.7s;
+	z-index: 200;
+	overflow: hidden;
 }
 
 .menuList {
-  list-style-type: none;
-  padding-inline-start: 0;
-  margin-bottom: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
+	list-style-type: none;
+	padding-inline-start: 0;
+	margin-bottom: 0;
+	margin-block-start: 0;
+	margin-block-end: 0;
 }
 
 .menuListMobile {
-  position: fixed;
-  top: 50px;
-  padding: 50px 0;
-  background-color: rgba(65, 82, 111, 0.9);
-  transition: 0.5s;
+	position: fixed;
+	top: 50px;
+	padding: 50px 0;
+	background-color: rgba(65, 82, 111, 0.9);
+	transition: 0.5s;
 }
 
 .menuListItem {
-  transition: 0.5s;
+	transition: 0.5s;
 }
 
 .menuLink {
-  position: relative;
-  padding: 5px;
-  font-size: 2rem;
-  color: var(--primary-colour);
-  transition: 0.4s;
+	position: relative;
+	padding: 5px 15px;
+	font-size: 2rem;
+	color: var(--primary-colour);
+	transition: 0.4s;
 }
 
 .menuLink:hover {
-  color: var(--secondary-colour);
-  text-decoration: none;
+	color: var(--secondary-colour);
+	text-decoration: none;
 }
 
-.menuLink:before {
-  content: '';
-  position: absolute;
-  height: 4px;
-  bottom: 2%;
-  left: 0;
-  right: 0;
-  background-color: rgba(93, 253, 209, 0.52);
-  transition: 0.4s;
-  z-index: -1;
+.menuLink:after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	bottom: 0;
+	left: 0;
+	right: 95%;
+	background-color: rgba(93, 253, 209, 0.6);
+	transition: 0.4s;
+	z-index: -1;
 }
 
-.menuLink:hover:before {
-  height: 105%;
-  bottom: -10%;
-  background-color: var(--primary-colour);
+.menuLink:hover:after {
+	right: 0;
+	background-image: linear-gradient(
+		to right,
+		rgba(93, 253, 210, 0.6),
+		rgb(0, 210, 210, 0.6),
+		rgb(0, 166, 193, 0.6),
+		rgb(55, 122, 158, 0.6),
+		rgb(65, 82, 111, 0.6)
+	);
 }
+
+/* .menuLink:hover:after {
+	height: 100%;
+	background-color: var(--primary-colour);
+} */
 
 @media (min-width: 768px) {
-  nav {
-    height: 80px;
-  }
+	nav {
+		height: 80px;
+	}
 
-  .brandName {
-    font-size: 4.5rem;
-  }
+	.brandName {
+		font-size: 4.5rem;
+	}
 
-  .menuListItem {
-    margin: 3px 30px 0 0;
-  }
+	.menuListItem {
+		margin: 3px 30px 0 0;
+	}
 }
