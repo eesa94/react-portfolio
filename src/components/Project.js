@@ -12,6 +12,7 @@ export class Project extends Component {
     };
 
     this.mouseEnter = this.mouseEnter.bind(this);
+    this.mouseLeave = this.mouseLeave.bind(this);
   }
 
   mouseEnter = () => {
@@ -89,13 +90,13 @@ export class Project extends Component {
           <div style={{ height: '10vh' }} />
           <Row noGutters className='projectRow'>
             <Col xs='12' lg={{ size: 6, offset: 1, order: 1 }}>
-              <Plx
+              {/* <Plx
                 style={{
                   height: '100%',
                   margin: 'auto'
                 }}
                 parallaxData={parallaxData}
-              >
+              > */}
                 <div
                   className={projectImageClass}
                   style={projectBackgroundImage}
@@ -122,20 +123,20 @@ export class Project extends Component {
                     </Button>
                   </div>
                 </div>
-              </Plx>
+              {/* </Plx> */}
             </Col>
             <Col
               xs='12'
               className='d-flex align-items-center'
               lg={{ size: 4, offset: 0, order: 2 }}
             >
-              <Plx
+              {/* <Plx
                 style={{
                   height: '100%',
                   margin: 'auto'
                 }}
                 parallaxData={parallaxData}
-              >
+              > */}
                 <div
                   style={{ height: '100%' }}
                   className={projectInformationClassRight}
@@ -150,7 +151,7 @@ export class Project extends Component {
                     </p>
                   </div>
                 </div>
-              </Plx>
+              {/* </Plx> */}
             </Col>
           </Row>
           <div style={{ height: '10vh' }} />
@@ -163,13 +164,13 @@ export class Project extends Component {
 
           <Row noGutters className='projectRow'>
             <Col xs='12' lg={{ size: 6, offset: 0, order: 2 }}>
-              <Plx
+              {/* <Plx
                 style={{
                   height: '100%',
                   margin: 'auto'
                 }}
                 parallaxData={parallaxData}
-              >
+              > */}
                 <div
                   className={projectImageClass}
                   style={projectBackgroundImage}
@@ -196,16 +197,16 @@ export class Project extends Component {
                     </Button>
                   </div>
                 </div>
-              </Plx>
+              {/* </Plx> */}
             </Col>
             <Col xs='12' lg={{ size: 4, offset: 1, order: 1 }}>
-              <Plx
+              {/* <Plx
                 style={{
                   height: '100%',
                   margin: 'auto'
                 }}
                 parallaxData={parallaxData}
-              >
+              > */}
                 <div className={projectInformationClassLeft}>
                   <div className='projectInformation'>
                     <h1 className='projectTitle montserrat-7 text-left'>
@@ -217,7 +218,7 @@ export class Project extends Component {
                     </p>
                   </div>
                 </div>
-              </Plx>
+              {/* </Plx> */}
             </Col>
           </Row>
           <div style={{ height: '10vh' }} />
