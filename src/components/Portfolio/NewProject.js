@@ -9,7 +9,9 @@ const NewProject = ({ index, name, image, description, url, github }) => {
         style={{ borderRight: '2px solid white' }}>
         <div className='projectSectionOne'>
           <h1 className='projectName montserrat-9'>{name}</h1>
-          <p>{description}</p>
+          {description.map((item) => (
+            <p className='montserrat-5 projectDescription'>{item}</p>
+          ))}
           <h2>Tech used</h2>
         </div>
       </div>
@@ -17,9 +19,11 @@ const NewProject = ({ index, name, image, description, url, github }) => {
         className='col-6 projectCol backgroundImage'
         style={{ backgroundImage: image }}>
         <div className='imageOverlay'>
-          <button className='btn montserrat-7 projectButton'>
-            View Project
-          </button>
+          <a href={url} target='_blank' rel='noopener noreferrer'>
+            <button className='btn montserrat-7 projectButton'>
+              View Project
+            </button>
+          </a>
         </div>
       </div>
     </div>

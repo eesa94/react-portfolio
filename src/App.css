@@ -12,33 +12,33 @@ body {
 
 .btn.focus,
 .btn:focus {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
-/* a:hover {
-    color: #fd5df7!important;
-    text-decoration: none!important;
-} */
+:focus,
+a:focus {
+  outline: none !important;
+}
 
 /* Fonts */
 .montserrat-5 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 .montserrat-6 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 .montserrat-7 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 
 .montserrat-9 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
+  font-weight: 900 !important;
 }
 
 .default-text {
