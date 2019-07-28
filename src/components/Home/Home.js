@@ -61,7 +61,6 @@ const Home = () => {
           <SocialLinks />
         </div>
       </Container>
-      <AboutMe />
     </Fragment>
   );
 };
