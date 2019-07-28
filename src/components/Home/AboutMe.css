@@ -1,0 +1,9 @@
+.aboutWrapper {
+  min-height: 60vh;
+  width: 100%;
+  display: flex;
+}
+
+.aboutSection {
+  width: 50%;
+}

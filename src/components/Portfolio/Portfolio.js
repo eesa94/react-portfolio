@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import Navbar from './Navigation/Navbar';
-import { Container } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
+import Navbar from '../Navigation/Navbar';
 import './Portfolio.css';
 import Project from './Project';
-import wallhaven634721 from '../img/wallhaven634721.jpg';
-import gimbap from '../img/gimbap.jpg';
-import eurobiketourss from '../img/eurobiketourss.jpg';
-import { Footer } from './Footer';
+import wallhaven634721 from '../../img/wallhaven634721.jpg';
+import gimbap from '../../img/gimbap.jpg';
+import eurobiketourss from '../../img/eurobiketourss.jpg';
+import { Footer } from '../Footer';
+
+import NewProject from './NewProject';
 
 export class Portfolio extends Component {
   constructor(props) {
@@ -44,12 +46,31 @@ export class Portfolio extends Component {
 
   render() {
     return (
-      <div>
+      <Container fluid style={{ padding: '0' }}>
+        {this.state.projects.map((project, index) => (
+          <NewProject
+            key={index}
+            index={index}
+            name={project.name}
+            image={project.image}
+            description={project.description}
+            url={project.url}
+            github={project.github}
+          />
+        ))}
+      </Container>
+    );
+  }
+}
+
+export default Portfolio;
+
+{
+  /* <div>
         <Navbar />
         <Container
           fluid
-          className='pageContainer portfolioContainer text-center'
-        >
+          className='pageContainer portfolioContainer text-center'>
           <h1 className='pageHeader montserrat-9 mb3'>Portfolio</h1>
           {this.state.projects.map((project, index) => (
             <Project
@@ -64,9 +85,5 @@ export class Portfolio extends Component {
           ))}
         </Container>
         <Footer />
-      </div>
-    );
-  }
+      </div> */
 }
-
-export default Portfolio;
