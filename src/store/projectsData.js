@@ -40,9 +40,9 @@ export const projects = [
     name: 'Wedding RSVP',
     image: `url(${wedding_rsvp})`,
     description: [
-      "For my brother's wedding, I built a full-stack RSVP app from scratch, using what I learned during my online web dev course.",
-      'A Postgres database was used to store all of the invited guests. I used email-only authentication, so that guests could log in simply by using the same email address which received the invitation. Authentication was set up such that only email addresses stored in the database could log in, preventing uninvited guests from accessing the RSVP section.',
-      "Upon completing the RSVP form and hitting submit, the guest's response was sent to a specific RSVP email address using Rails' ActionMailer, where organisers could see which guests had accepted and which had declined."
+      'For a wedding, I built a full-stack RSVP app from scratch.',
+      'I used email-only authentication, allowing guests to log in using the same email address which received the invitation. Only emails stored in the database could log in, restricting access to uninvited guests.',
+      "Submission of the RSVP form triggers an email to an inbox using Rails' ActionMailer."
     ],
     url: 'https://jessaadil.herokuapp.com/',
     github: 'https://github.com/eesa94/weddingapp',

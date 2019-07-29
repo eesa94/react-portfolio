@@ -11,23 +11,28 @@ const Project = ({ index, name, image, description, url, github, tech }) => {
       >
         <div className='projectSectionOne'>
           <h1 className='projectName montserrat-9'>{name}</h1>
-          {description.map((item) => (
-            <p className='montserrat-5 projectDescription'>{item}</p>
-          ))}
-          <h2>Tech used</h2>
-          {tech.map((tech, index) => (
-            <Icon
-              key={index}
-              icon={tech.icon}
-              style={{
-                color: tech.color,
-                height: '4em',
-                width: '4em',
-                marginRight: '15px'
-              }}
-              title='skill'
-            />
-          ))}
+          <div className='mb3'>
+            {description.map((item) => (
+              <p className='montserrat-5 projectDescription'>{item}</p>
+            ))}
+          </div>
+          <div className='mb3'>
+            {tech.map((tech, index) => (
+              <Icon
+                key={index}
+                icon={tech.icon}
+                style={{
+                  color: tech.color,
+                  height: '4em',
+                  width: '4em',
+                  marginRight: '15px'
+                }}
+              />
+            ))}
+          </div>
+          <a href={github} target='_blank' rel='noopener noreferrer'>
+            <button className='btn montserrat-7 projectButton'>Github</button>
+          </a>
         </div>
       </div>
       <div
