@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from './Navigation/Navbar';
+import Navbar from '../Navigation/Navbar';
 import {
   Container,
   Row,
@@ -10,7 +10,7 @@ import {
   CardText
 } from 'reactstrap';
 import './About.css';
-import { Footer } from './Footer';
+import { Footer } from '../Footer';
 import styled from 'styled-components';
 
 const SkillSquare = styled.div`

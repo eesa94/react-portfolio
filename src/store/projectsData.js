@@ -6,6 +6,7 @@ import seoul_food from '../img/seoul_food.jpg';
 import euro_bike_tours from '../img/euro_bike_tours.jpg';
 import zenith_cosmetics from '../img/zenith_cosmetics.jpg';
 import low_ambition from '../img/low_ambition.jpg';
+import { skills } from './skillsData';
 
 export const projects = [
   {
@@ -15,7 +16,14 @@ export const projects = [
       'One of my ongoing projects, I am using this site as a place to experiment with features, build components, and practice my front end skills by replicating interesting features I see on other websites.'
     ],
     url: 'https://eesa-react-playground.netlify.com/',
-    github: 'https://github.com/eesa94/react-playground'
+    github: 'https://github.com/eesa94/react-playground',
+    tech: [
+      skills.html,
+      skills.css,
+      skills.bootstrap,
+      skills.javascript,
+      skills.react
+    ]
   },
   {
     name: 'Currency Converter',
@@ -25,7 +33,8 @@ export const projects = [
       'In addition, the theme colour can be changed, and selected currencies can be swapped.'
     ],
     url: 'https://expo.io/@eesa94/currencyconverter',
-    github: 'https://github.com/eesa94/currencyconverter'
+    github: 'https://github.com/eesa94/currencyconverter',
+    tech: [skills.javascript, skills.react, skills.redux]
   },
   {
     name: 'Wedding RSVP',
@@ -36,7 +45,16 @@ export const projects = [
       "Upon completing the RSVP form and hitting submit, the guest's response was sent to a specific RSVP email address using Rails' ActionMailer, where organisers could see which guests had accepted and which had declined."
     ],
     url: 'https://jessaadil.herokuapp.com/',
-    github: 'https://github.com/eesa94/weddingapp'
+    github: 'https://github.com/eesa94/weddingapp',
+    tech: [
+      skills.html,
+      skills.css,
+      skills.bootstrap,
+      skills.javascript,
+      skills.jquery,
+      skills.ruby,
+      skills.rails
+    ]
   },
   {
     name: 'Apex Automotive',
@@ -47,7 +65,14 @@ export const projects = [
       'I experimented with custom parallax effects, and a user-friendly way of showcasing the services and products on offer.'
     ],
     url: 'https://apexautomotive.netlify.com/',
-    github: 'https://github.com/eesa94/automotive'
+    github: 'https://github.com/eesa94/automotive',
+    tech: [
+      skills.html,
+      skills.css,
+      skills.bootstrap,
+      skills.javascript,
+      skills.jquery
+    ]
   },
   {
     name: 'Seoul Food',
@@ -57,7 +82,14 @@ export const projects = [
       'I was keen to put my newly-learned skills into practice after starting to learn React around September/October 2018.'
     ],
     url: 'https://seoulfood.netlify.com/',
-    github: 'https://github.com/eesa94/restaurant'
+    github: 'https://github.com/eesa94/restaurant',
+    tech: [
+      skills.html,
+      skills.css,
+      skills.bootstrap,
+      skills.javascript,
+      skills.react
+    ]
   },
   {
     name: 'Euro Bike Tours',
@@ -67,7 +99,15 @@ export const projects = [
       'The primary focus of this project was the back end; the goal being to build a robust, full-stack application which would meet all of the functional requirements on the back end and in theory go live as a real e-commerce store.'
     ],
     url: 'https://eurobiketours.herokuapp.com/',
-    github: 'https://github.com/eesa94/eurobiketours'
+    github: 'https://github.com/eesa94/eurobiketours',
+    tech: [
+      skills.html,
+      skills.css,
+      skills.bootstrap,
+      skills.jquery,
+      skills.ruby,
+      skills.rails
+    ]
   },
   {
     name: 'Zenith Cosmetics',
@@ -78,7 +118,8 @@ export const projects = [
       'I went with the idea of full page background images with text overlayed as I found this to be aesthetically pleasing and gave me the chance to experiment with different layouts and positioning.'
     ],
     url: 'https://zenithcosmetics.netlify.com/',
-    github: 'https://github.com/eesa94/zenith'
+    github: 'https://github.com/eesa94/zenith',
+    tech: [skills.html, skills.css, skills.bootstrap, skills.jquery]
   },
   {
     name: 'Low Ambition',
@@ -88,6 +129,7 @@ export const projects = [
       'I used a single background image for the entire site, and a simple colour scheme of dark blue and faded yellow.'
     ],
     url: 'https://low-ambition.netlify.com/',
-    github: 'https://github.com/eesa94/low-ambition'
+    github: 'https://github.com/eesa94/low-ambition',
+    tech: [skills.html, skills.css, skills.bootstrap, skills.jquery]
   }
 ];
