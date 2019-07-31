@@ -1,20 +1,15 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React, { Fragment } from 'react';
 import './AboutMe.css';
 
-class AboutMe extends Component {
-  render() {
-    return (
-      <div className='container-fluid aboutWrapper'>
-        <div className='aboutSection aboutSectionOne'>
-          <h1>About Me</h1>
-        </div>
-        <div className='aboutSection aboutSectionTwo'>
-          <h1>Portfolio</h1>
-        </div>
+const AboutMe = () => {
+  return (
+    <Fragment>
+      <div className='aboutSection aboutSectionOne'>
+        <h1 className='sectionHeader montserrat-9'>About Me</h1>
       </div>
-    );
-  }
-}
+      <div className='aboutSection aboutSectionTwo' />
+    </Fragment>
+  );
+};
 
 export default AboutMe;

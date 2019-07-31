@@ -6,6 +6,7 @@ import home_background from '../../img/home_background.jpg';
 import SocialLinks from '../SocialLinks';
 
 import AboutMe from './AboutMe';
+import PortfolioPreview from './PortfolioPreview';
 
 const Home = () => {
   const bgImage = {
@@ -14,7 +15,7 @@ const Home = () => {
 
   return (
     <Fragment>
-      <Container fluid className='homeContainer text-center' style={bgImage}>
+      <Container fluid className='heroContainer text-center' style={bgImage}>
         <div className='homeInner'>
           <h1 className='welcomeHeader montserrat-9 mb3'>Welcome</h1>
           <h3 className='welcomeSubHeader montserrat-5 mb3'>
@@ -60,6 +61,12 @@ const Home = () => {
 
           <SocialLinks />
         </div>
+      </Container>
+      <Container fluid className='homeContainer'>
+        <AboutMe />
+      </Container>
+      <Container fluid className='homeContainer'>
+        <PortfolioPreview />
       </Container>
     </Fragment>
   );

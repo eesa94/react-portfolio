@@ -79,3 +79,18 @@ a:focus {
 .pageHeader {
   font-size: 4rem;
 }
+
+.sectionHeader {
+  display: block;
+  font-size: 4rem;
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(
+    to left,
+    #ff9b00,
+    #ff8050,
+    #ff6e8a,
+    #ff71c3,
+    #f486f4
+  );
+}

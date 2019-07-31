@@ -1,7 +1,5 @@
 import React from 'react';
 import { Container } from 'reactstrap';
-import Navbar from '../Navigation/Navbar';
-import './Portfolio.css';
 import Project from './Project';
 import { projects } from '../../store/projectsData';
 
