@@ -86,6 +86,23 @@ a:focus {
   color: transparent;
   background-clip: text;
   background-image: linear-gradient(
+    to right,
+    #f486f4,
+    #b780de,
+    #8274bf,
+    #5a6599
+  );
+  position: relative;
+}
+
+.sectionHeader::after {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  left: 15%;
+  height: 6px;
+  width: 110%;
+  background-image: linear-gradient(
     to left,
     #ff9b00,
     #ff8050,
@@ -93,12 +110,24 @@ a:focus {
     #ff71c3,
     #f486f4
   );
-  background-image: linear-gradient(
-    to left,
-    #41526f,
-    #5a6599,
-    #8274bf,
-    #b780de,
-    #f486f4
-  );
 }
+
+/* ====== */
+/* subtle gradient:
+background-image: linear-gradient(
+  to right,
+  #f486f4,
+  #b780de,
+  #8274bf,
+  #5a6599
+);
+
+bright gradient:
+background-image: linear-gradient(
+  to left,
+  #ff9b00,
+  #ff8050,
+  #ff6e8a,
+  #ff71c3,
+  #f486f4
+); */

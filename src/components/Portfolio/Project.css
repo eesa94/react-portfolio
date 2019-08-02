@@ -9,7 +9,7 @@
   height: 100%;
   width: 100%;
   padding: 8% 15% 0;
-  background-color: rgba(2, 18, 43, 0.9);
+  background-color: rgba(2, 18, 43, 1);
 }
 
 .projectName {
@@ -17,12 +17,11 @@
   display: block;
   color: transparent;
   background-image: linear-gradient(
-    to left,
-    #41526f,
-    #5a6599,
-    #8274bf,
+    to right,
+    #f486f4,
     #b780de,
-    #f486f4
+    #8274bf,
+    #5a6599
   );
   background-clip: text;
   margin-bottom: 40px;
@@ -83,13 +82,13 @@
 .projectButton:hover::before {
   width: 100%;
   background-image: linear-gradient(
-    to left,
-    rgba(255, 153, 0, 0.9),
-    rgb(255, 128, 80, 0.9),
-    rgb(255, 110, 138, 0.9),
-    rgb(255, 113, 195, 0.9),
-    rgb(244, 134, 244, 0.9)
+    to right,
+    rgb(244, 134, 244, 0.9),
+    rgb(183, 128, 222, 0.9),
+    rgb(130, 116, 191, 0.9),
+    rgb(90, 101, 153, 0.9)
   );
+
   box-shadow: 3px 2px 2px 1px black;
 }
 

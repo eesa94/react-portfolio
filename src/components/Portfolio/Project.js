@@ -7,8 +7,7 @@ const Project = ({ index, name, image, description, url, github, tech }) => {
     <div className='row' key={index}>
       <div
         className='col-12 col-lg-6 projectCol'
-        style={{ borderRight: '2px solid white' }}
-      >
+        style={{ borderRight: '2px solid white' }}>
         <div className='projectSectionOne'>
           <h1 className='projectName montserrat-9'>{name}</h1>
           <div className='mb3'>
@@ -25,7 +24,8 @@ const Project = ({ index, name, image, description, url, github, tech }) => {
                   color: tech.color,
                   height: '4em',
                   width: '4em',
-                  marginRight: '15px'
+                  marginRight: '15px',
+                  boxShadow: `3px 3px 6px 0px ${tech.color}`
                 }}
               />
             ))}
@@ -37,8 +37,7 @@ const Project = ({ index, name, image, description, url, github, tech }) => {
       </div>
       <div
         className='col-12 col-lg-6 projectCol backgroundImage'
-        style={{ backgroundImage: image }}
-      >
+        style={{ backgroundImage: image }}>
         <div className='imageOverlay'>
           <a href={url} target='_blank' rel='noopener noreferrer'>
             <button className='btn montserrat-7 projectButton'>
