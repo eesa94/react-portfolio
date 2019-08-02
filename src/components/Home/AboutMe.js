@@ -4,10 +4,10 @@ import './AboutMe.css';
 const AboutMe = () => {
   return (
     <Fragment>
-      <div className='aboutSection aboutSectionOne'>
+      <div className='homeInnerSectionOne'>
         <h1 className='sectionHeader montserrat-9'>About Me</h1>
       </div>
-      <div className='aboutSection aboutSectionTwo' />
+      <div className='homeInnerSectionTwo' />
     </Fragment>
   );
 };

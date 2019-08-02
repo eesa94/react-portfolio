@@ -93,4 +93,12 @@ a:focus {
     #ff71c3,
     #f486f4
   );
+  background-image: linear-gradient(
+    to left,
+    #41526f,
+    #5a6599,
+    #8274bf,
+    #b780de,
+    #f486f4
+  );
 }

@@ -8,7 +8,7 @@
 .projectSectionOne {
   height: 100%;
   width: 100%;
-  padding: 15% 15% 0;
+  padding: 8% 15% 0;
   background-color: rgba(2, 18, 43, 0.9);
 }
 
@@ -29,7 +29,7 @@
   font-size: 3rem;
 }
 
-.projectName:after {
+.projectName::after {
   content: '';
   position: absolute;
   bottom: -50%;
@@ -66,7 +66,7 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.projectButton:before {
+.projectButton::before {
   content: '';
   position: absolute;
   top: 0;
@@ -80,7 +80,7 @@
   z-index: -1;
 }
 
-.projectButton:hover:before {
+.projectButton:hover::before {
   width: 100%;
   background-image: linear-gradient(
     to left,
