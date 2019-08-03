@@ -1,7 +1,7 @@
 import React from 'react';
 import './Project.css';
-import { Icon } from '@iconify/react';
-import CustomButton from '../CustomButton';
+import SkillIcon from './SkillIcon';
+import CustomButton from '../Button/CustomButton';
 
 const Project = ({ index, name, image, description, url, github, tech }) => {
   return (
@@ -12,24 +12,16 @@ const Project = ({ index, name, image, description, url, github, tech }) => {
         <div className='projectSectionOne'>
           <h1 className='projectName montserrat-9'>{name}</h1>
           <div className='mb3'>
-            {description.map((item) => (
-              <p className='montserrat-5 projectDescription'>{item}</p>
+            {description.map((item, index) => (
+              <p className='montserrat-5 projectDescription' key={index}>
+                {item}
+              </p>
             ))}
           </div>
           <div className='skillContainer'>
             <div className='mb3'>
               {tech.map((tech, index) => (
-                <Icon
-                  key={index}
-                  icon={tech.icon}
-                  style={{
-                    color: tech.color,
-                    height: '4em',
-                    width: '4em',
-                    marginRight: '15px',
-                    boxShadow: `3px 3px 6px 0px ${tech.color}`
-                  }}
-                />
+                <SkillIcon key={index} icon={tech.icon} color={tech.color} />
               ))}
             </div>
             <CustomButton
