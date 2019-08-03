@@ -1,6 +1,7 @@
 import React from 'react';
 import './Project.css';
 import { Icon } from '@iconify/react';
+import CustomButton from '../CustomButton';
 
 const Project = ({ index, name, image, description, url, github, tech }) => {
   return (
@@ -15,35 +16,35 @@ const Project = ({ index, name, image, description, url, github, tech }) => {
               <p className='montserrat-5 projectDescription'>{item}</p>
             ))}
           </div>
-          <div className='mb3'>
-            {tech.map((tech, index) => (
-              <Icon
-                key={index}
-                icon={tech.icon}
-                style={{
-                  color: tech.color,
-                  height: '4em',
-                  width: '4em',
-                  marginRight: '15px',
-                  boxShadow: `3px 3px 6px 0px ${tech.color}`
-                }}
-              />
-            ))}
+          <div className='skillContainer'>
+            <div className='mb3'>
+              {tech.map((tech, index) => (
+                <Icon
+                  key={index}
+                  icon={tech.icon}
+                  style={{
+                    color: tech.color,
+                    height: '4em',
+                    width: '4em',
+                    marginRight: '15px',
+                    boxShadow: `3px 3px 6px 0px ${tech.color}`
+                  }}
+                />
+              ))}
+            </div>
+            <CustomButton
+              linkTo={github}
+              size={'Small'}
+              text={'Project Repo'}
+            />
           </div>
-          <a href={github} target='_blank' rel='noopener noreferrer'>
-            <button className='btn montserrat-7 projectButton'>Github</button>
-          </a>
         </div>
       </div>
       <div
         className='col-12 col-lg-6 projectCol backgroundImage'
         style={{ backgroundImage: image }}>
         <div className='imageOverlay'>
-          <a href={url} target='_blank' rel='noopener noreferrer'>
-            <button className='btn montserrat-7 projectButton'>
-              View Project
-            </button>
-          </a>
+          <CustomButton linkTo={url} size={'Large'} text={'View Project'} />
         </div>
       </div>
     </div>
