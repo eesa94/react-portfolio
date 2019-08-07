@@ -77,11 +77,6 @@ a:focus {
 }
 
 /* Common components */
-.pageContainer {
-  padding-top: 100px;
-  padding-bottom: 50px;
-}
-
 .pageHeader {
   font-size: 4rem;
 }
@@ -105,9 +100,9 @@ a:focus {
   content: '';
   position: absolute;
   bottom: -50%;
-  left: 15%;
+  left: 5%;
   height: 6px;
-  width: 110%;
+  width: 60%;
   background-image: linear-gradient(
     to left,
     #ff9b00,

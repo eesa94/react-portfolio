@@ -1,19 +1,5 @@
-.card {
+.aboutSectionOne {
   height: 100%;
-}
-
-.card-header h2 {
-  font-size: 2.5rem;
-  letter-spacing: 0.5px;
-}
-
-.card-text {
-  text-align: left;
-  padding: 5px 15px;
-  font-size: 1.6rem;
-  letter-spacing: 0.6px;
-}
-
-.card-text i {
-  margin-right: 10px;
+  width: 100%;
+  padding: 8% 15% 0;
 }
