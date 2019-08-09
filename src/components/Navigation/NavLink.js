@@ -34,18 +34,11 @@ class NavLink extends Component {
   };
 
   render() {
-    // index prop for accessing array index
-    const index = this.props.index;
-    // link prop
-    const link = this.props.link;
-    // variable for link text
-    const linkName = link;
+    const { index, link } = this.props;
     // variable for home link
     const linkHome = '/';
     // variable for other links apart from home - remove white space
     const linkOther = link.toLowerCase().replace(/\s+/g, '');
-
-    const menuLinkClass = 'menuLink montserrat-5';
 
     return (
       <li
@@ -53,8 +46,11 @@ class NavLink extends Component {
         onMouseEnter={this.handleMouseEnter.bind(this, index)}
         onMouseLeave={this.handleMouseLeave.bind(this)}
       >
-        <Link to={index === 0 ? linkHome : linkOther} className={menuLinkClass}>
-          {linkName}
+        <Link
+          to={index === 0 ? linkHome : linkOther}
+          className='menuLink montserrat-5'
+        >
+          {link}
         </Link>
       </li>
     );

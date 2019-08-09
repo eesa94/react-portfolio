@@ -1,24 +1,53 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './Navbar.css';
-import MobileNavigation from './MobileNavigation';
-import DesktopNavigation from './DesktopNavigation';
-import MediaQuery from 'react-responsive';
+import { Link } from 'react-router-dom';
+import { Minus } from 'react-burgers';
+import NavMenu from './NavMenu';
 
 class Navbar extends Component {
   state = {
-    links: ['Home', 'About', 'Portfolio', 'Contact']
+    links: ['Home', 'About', 'Portfolio', 'Contact'],
+    menuOpen: false,
+    active: false
+  };
+
+  toggleBurger = () => {
+    this.setState({
+      active: !this.state.active
+    });
+  };
+
+  toggleMenu = () => {
+    this.setState({
+      menuOpen: !this.state.menuOpen
+    });
   };
 
   render() {
+    const navMenuStyle = this.state.menuOpen ? { left: 0 } : { left: '-200%' };
+
     return (
-      <nav className='w-100 position-fixed'>
-        <MediaQuery maxWidth={991}>
-          <MobileNavigation links={this.state.links} />
-        </MediaQuery>
-        <MediaQuery minWidth={992}>
-          <DesktopNavigation links={this.state.links} />
-        </MediaQuery>
-      </nav>
+      <Fragment>
+        <nav>
+          <div className='brand'>
+            <h3 className='white'>Brandname</h3>
+          </div>
+          <Minus
+            width={30}
+            lineHeight={3}
+            lineSpacing={4}
+            padding='5px'
+            color='var(--primary-colour)'
+            className='burger'
+            active={this.state.active}
+            onClick={() => {
+              this.toggleBurger();
+              this.toggleMenu();
+            }}
+          />
+        </nav>
+        <NavMenu style={navMenuStyle} links={this.state.links} />
+      </Fragment>
     );
   }
 }
