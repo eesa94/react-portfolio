@@ -1,11 +1,18 @@
 /* hero styling */
 .heroContainer {
-  padding-top: 5%;
-  min-height: 100vh;
+  height: 100%;
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  padding: 0;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 5%;
 }
 
 .welcomeHeader {
