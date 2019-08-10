@@ -11,7 +11,7 @@ const About = () => {
       <Container
         fluid
         style={{
-          paddingTop: '120px',
+          padding: '0',
           backgroundColor: 'rgba(2, 18, 43, 1)'
         }}>
         <div className='row' style={{ minHeight: '100vh' }}>

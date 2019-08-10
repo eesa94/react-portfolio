@@ -3,16 +3,17 @@ import './Home.css';
 import { Container, Row, Col, Button } from 'reactstrap';
 import { Link, withRouter } from 'react-router-dom';
 import home_background from '../../img/home_background.jpg';
+import bruno_thethe_qRCQBDtIPW0_unsplash_edit from '../../img/bruno_thethe_qRCQBDtIPW0_unsplash_edit.jpg';
 import SocialLinks from '../SocialLinks';
 
 const Home = () => {
   const bgImage = {
-    backgroundImage: `url(${home_background})`
+    backgroundImage: `url(${bruno_thethe_qRCQBDtIPW0_unsplash_edit})`
   };
 
   return (
     <Container fluid className='heroContainer text-center' style={bgImage}>
-      <div className='homeInner'>
+      <div className='homeInner white'>
         <h1 className='welcomeHeader montserrat-9 mb3'>Welcome</h1>
         <h3 className='welcomeSubHeader montserrat-5 mb3'>
           Find out more about me, or view my portfolio, by clicking below.
