@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Navbar from '../Navigation/Navbar';
+import NavBar from '../Navigation/NavBar';
 import { Container } from 'reactstrap';
 import './About.css';
 import { Footer } from '../Footer';
@@ -7,19 +7,17 @@ import { Footer } from '../Footer';
 const About = () => {
   return (
     <Fragment>
-      <Navbar />
+      <NavBar />
       <Container
         fluid
         style={{
           paddingTop: '120px',
           backgroundColor: 'rgba(2, 18, 43, 1)'
-        }}
-      >
+        }}>
         <div className='row' style={{ minHeight: '100vh' }}>
           <div
             className='col-12 col-lg-6'
-            style={{ borderRight: '2px solid white' }}
-          >
+            style={{ borderRight: '2px solid white' }}>
             <div className='aboutSectionOne'>
               <h1 className='sectionHeader mb3'>Placeholder</h1>
               <p className='white'>

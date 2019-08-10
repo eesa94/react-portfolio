@@ -1,3 +1,10 @@
+.burger {
+  z-index: 500;
+  position: fixed;
+  right: 2%;
+  top: 2.5%;
+}
+
 nav {
   position: fixed;
   display: flex;
@@ -22,31 +29,39 @@ nav {
   color: var(--primary-colour);
 }
 
-.navigationMenuContainer {
-  position: absolute;
+.navMenuContainer {
+  position: fixed;
   top: 0;
-  height: 100vh;
   width: 100%;
-  margin-top: 80px;
-  background-color: rgba(65, 82, 111, 0.9);
+  background-color: var(--secondary-colour);
+  background-image: linear-gradient(
+    to right bottom,
+    #02122b,
+    #0e1e35,
+    #1b2940,
+    #27354a,
+    #344155
+  );
   transition: 0.7s;
+  transition-delay: 0.1s;
   z-index: 200;
   overflow: hidden;
 }
 
-.menuList {
+.navMenuList {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
-  list-style-type: none;
   padding-inline-start: 0;
   margin-bottom: 0;
   margin-block-start: 0;
   margin-block-end: 0;
-  padding-top: 15%;
+  list-style-type: none;
+  transition: 0.5s;
+  transition-delay: 1s;
 }
 
 .menuListMobile {
@@ -65,9 +80,15 @@ nav {
 .menuLink {
   position: relative;
   padding: 5px 15px;
-  font-size: 4.5rem;
+  font-size: 6rem;
+  letter-spacing: 1px;
   color: #fff;
   transition: 0.4s;
+}
+
+.menuLink:hover {
+  color: var(--primary-colour);
+  text-decoration: none;
 }
 
 .menuLink:after {
@@ -80,13 +101,18 @@ nav {
   width: 0;
   transition: 0.4s;
   z-index: -1;
-}
-.menuLink:hover {
-  color: #fff;
-  text-decoration: none;
+  /* width: 100%;
+  background-image: linear-gradient(
+    to left,
+    #ff9b00,
+    #ff8050,
+    #ff6e8a,
+    #ff71c3,
+    #f486f4
+  ); */
 }
 
-.menuLink:hover:after {
+/* .menuLink:hover:after {
   width: 100%;
   background-image: linear-gradient(
     to left,
@@ -96,7 +122,7 @@ nav {
     #ff71c3,
     #f486f4
   );
-}
+} */
 
 @media (min-width: 768px) {
   nav {

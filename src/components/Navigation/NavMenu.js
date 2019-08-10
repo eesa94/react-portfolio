@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Navbar.css';
 import NavLink from './NavLink';
 
 class NavMenu extends Component {
@@ -8,11 +7,13 @@ class NavMenu extends Component {
   };
 
   render() {
-    const { style, links } = this.props;
+    const { menuOpen, links } = this.props;
+    const navMenuStyle = menuOpen ? { height: '100%' } : { height: '0' };
+    const navMenuListStyle = menuOpen ? { opacity: 1 } : { opacity: 0 };
 
     return (
-      <div className='navigationMenuContainer' style={style}>
-        <ul className='menuList'>
+      <div className='navMenuContainer' style={navMenuStyle}>
+        <ul className='navMenuList' style={navMenuListStyle}>
           {links.map((link, index) => (
             <NavLink key={index} index={index} link={link} />
           ))}

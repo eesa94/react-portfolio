@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
 
 class NavLink extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      activeLink: -1
-    };
-  }
+  state = {
+    activeLink: -1
+  };
 
   handleMouseEnter(index) {
     this.setState(
@@ -44,12 +39,10 @@ class NavLink extends Component {
       <li
         className='menuListItem'
         onMouseEnter={this.handleMouseEnter.bind(this, index)}
-        onMouseLeave={this.handleMouseLeave.bind(this)}
-      >
+        onMouseLeave={this.handleMouseLeave.bind(this)}>
         <Link
           to={index === 0 ? linkHome : linkOther}
-          className='menuLink montserrat-5'
-        >
+          className='menuLink montserrat-7'>
           {link}
         </Link>
       </li>
