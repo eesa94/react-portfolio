@@ -1,15 +1,120 @@
 /* hero styling */
 .heroContainer {
-  padding: 5vh 0;
+  padding-top: 5%;
   min-height: 100vh;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 .welcomeHeader {
-  font-size: 6rem;
+  display: inline-block;
+  position: relative;
+  font-size: 8rem;
+  letter-spacing: 1.2px;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    #f486f4,
+    #b780de,
+    #8274bf,
+    #5a6599
+  );
+  background-clip: text;
+  margin-bottom: 70px;
+}
+
+.welcomeHeader::after {
+  content: '';
+  position: absolute;
+  bottom: -15%;
+  left: 5%;
+  width: 130%;
+  height: 8px;
+  background-image: linear-gradient(
+    to left,
+    #ff9b00,
+    #ff8050,
+    #ff6e8a,
+    #ff71c3,
+    #f486f4
+  );
+}
+
+.welcomeSubHeader {
+  position: relative;
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  letter-spacing: 0.8px;
+  text-shadow: 2px 2px 5px black;
+  z-index: 5;
+}
+
+.welcomeSubHeader::before {
+  position: absolute;
+  top: -78%;
+  left: -11%;
+  font-size: 4.5rem;
+  color: transparent;
+  text-shadow: 0px 0px 3.8px #f486f4;
+  z-index: -1;
+}
+
+#line1::before {
+  content: 'I am a';
+}
+
+#line2::before {
+  content: 'Based in';
+}
+
+#line3::before {
+  content: 'My passion is';
+}
+
+/* .welcomeSubHeader::before {
+  content: 'I am...';
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  text-shadow: none;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.welcomeSubHeader:hover::before {
+  top: -30%;
+  left: -5%;
+  text-shadow: 0px 0px 4px #f486f4;
+}
+
+.welcomeSubHeader::after {
+  content: 'I am...';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: transparent;
+  text-shadow: none;
+  transition: 0.3s;
+  transition-delay: 0.1s;
+  z-index: -1;
+}
+.welcomeSubHeader:hover::after {
+  bottom: -30%;
+  right: -5%;
+  text-shadow: 0px 0px 4px #5a6599;
+} */
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 140px;
+  padding: 20px 5px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .homeButton {
@@ -34,13 +139,4 @@
   padding: 1.5px;
   background-color: #e1ebf0;
   border: 2px solid #4c4c4c;
-}
-
-/* other home sections styling */
-.homeContainer {
-  min-height: 60vh;
-  width: 100%;
-  display: flex;
-  padding: 5% 0 0 5%;
-  background-color: rgba(2, 18, 43, 1);
 }
