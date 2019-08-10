@@ -7,7 +7,7 @@ class NavMenu extends Component {
   };
 
   render() {
-    const { menuOpen, links } = this.props;
+    const { menuOpen, links, toggleMenu, toggleBurger } = this.props;
     const navMenuStyle = menuOpen ? { height: '100%' } : { height: '0' };
     const navMenuListStyle = menuOpen ? { opacity: 1 } : { opacity: 0 };
 
@@ -15,7 +15,13 @@ class NavMenu extends Component {
       <div className='navMenuContainer' style={navMenuStyle}>
         <ul className='navMenuList' style={navMenuListStyle}>
           {links.map((link, index) => (
-            <NavLink key={index} index={index} link={link} />
+            <NavLink
+              key={index}
+              index={index}
+              link={link}
+              toggleMenu={toggleMenu}
+              toggleBurger={toggleBurger}
+            />
           ))}
         </ul>
       </div>

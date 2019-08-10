@@ -15,6 +15,11 @@ class NavBar extends Component {
     this.setState({
       active: !this.state.active
     });
+    if (!this.state.active) {
+      this.setState({
+        menuOpen: false
+      });
+    }
   };
 
   toggleMenu = () => {
@@ -26,13 +31,11 @@ class NavBar extends Component {
   render() {
     return (
       <Fragment>
-        <nav>
-          <div className='brand'>
-            <Link to='/' className='brandLink'>
-              <h1 className='brandName montserrat-9'>Eesa.uk</h1>
-            </Link>
-          </div>
-        </nav>
+        <div className='brand'>
+          <Link to='/' className='brandLink'>
+            <h1 className='brandName montserrat-9'>Eesa.uk</h1>
+          </Link>
+        </div>
         <Minus
           width={30}
           lineHeight={3}
@@ -47,7 +50,12 @@ class NavBar extends Component {
           }}
           style={{ zIndex: 500, position: 'fixed' }}
         />
-        <NavMenu menuOpen={this.state.menuOpen} links={this.state.links} />
+        <NavMenu
+          menuOpen={this.state.menuOpen}
+          links={this.state.links}
+          toggleMenu={this.toggleMenu}
+          toggleBurger={this.toggleBurger}
+        />
       </Fragment>
     );
   }

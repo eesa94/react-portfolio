@@ -8,7 +8,7 @@ const Portfolio = () => {
   return (
     <Fragment>
       <NavBar />
-      <Container fluid style={{ padding: '80px 0 0' }}>
+      <Container fluid style={{ padding: '0' }}>
         {projects.map((project, index) => (
           <Project
             key={index}

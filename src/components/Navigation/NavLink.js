@@ -29,7 +29,7 @@ class NavLink extends Component {
   };
 
   render() {
-    const { index, link } = this.props;
+    const { index, link, toggleMenu, toggleBurger } = this.props;
     // variable for home link
     const linkHome = '/';
     // variable for other links apart from home - remove white space
@@ -42,7 +42,11 @@ class NavLink extends Component {
         onMouseLeave={this.handleMouseLeave.bind(this)}>
         <Link
           to={index === 0 ? linkHome : linkOther}
-          className='menuLink montserrat-7'>
+          className='menuLink montserrat-7'
+          onClick={() => {
+            toggleBurger();
+            toggleMenu();
+          }}>
           {link}
         </Link>
       </li>
