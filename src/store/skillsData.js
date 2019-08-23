@@ -57,3 +57,61 @@ export const skills = {
     color: '#cb3837'
   }
 };
+
+export const skillsArray = [
+  {
+    name: 'html',
+    icon: html5Icon,
+    color: '#e34f26'
+  },
+  {
+    name: 'css',
+    icon: css3Alt,
+    color: '#33a9dc'
+  },
+  {
+    name: 'bootstrap',
+    icon: bootstrapIcon,
+    color: '#563d7c'
+  },
+  {
+    name: 'javascript',
+    icon: jsIcon,
+    color: '#F0DB4F'
+  },
+  {
+    name: 'jquery',
+    icon: jqueryIcon,
+    color: '#79cff5'
+  },
+  {
+    name: 'react',
+    icon: reactIcon,
+    color: '#61dafb'
+  },
+  {
+    name: 'redux',
+    icon: reduxIcon,
+    color: '#764abc'
+  },
+  {
+    name: 'ruby',
+    icon: rubyIcon,
+    color: '#ac1400'
+  },
+  {
+    name: 'rails',
+    icon: languageRubyOnRails,
+    color: '#c00'
+  },
+  {
+    name: 'git',
+    icon: gitAlt,
+    color: '#f54d27'
+  },
+  {
+    name: 'npm',
+    icon: npmIcon,
+    color: '#cb3837'
+  }
+];

@@ -4,6 +4,8 @@ import { Container, Row, Col, Button } from 'reactstrap';
 import { Link, withRouter } from 'react-router-dom';
 import bruno_thethe_qRCQBDtIPW0_unsplash_edit from '../../img/bruno_thethe_qRCQBDtIPW0_unsplash_edit.jpg';
 import SocialLinks from '../SocialLinks';
+import SkillIcon from '../Portfolio/SkillIcon';
+import { skillsArray } from '../../store/skillsData';
 
 const Home = () => {
   const bgImage = {
@@ -19,26 +21,19 @@ const Home = () => {
           </Col>
         </Row>
         <Row>
-          <Col lg={{ size: 10, offset: 2 }} style={{ marginBottom: '100px' }}>
-            <h3 className='montserrat-7 white'>Welcome to my personal site.</h3>
-          </Col>
+          <Col lg={{ size: 6, offset: 2 }} style={{ marginBottom: '100px' }}>
+            <h1 className='welcomeSubHeader montserrat-7 white'>
+              Hey, I'm Eesa.
+            </h1>
 
-          <Col lg={{ size: 9, offset: 3 }}>
-            <h3 className='welcomeSubHeader montserrat-7 white' id='line1'>
-              front end developer.
-            </h3>
-
-            <h3 className='welcomeSubHeader montserrat-7 white' id='line2'>
-              Leeds.
-            </h3>
-
-            <h3 className='welcomeSubHeader montserrat-7 white' id='line3'>
-              modern, aesthetic minimalism.
+            <h3 className='welcomeSubHeader montserrat-7 white'>
+              I'm a front end developer based in Leeds, who is passionate about
+              building modern, responsive user interfaces.
             </h3>
           </Col>
         </Row>
         <Row>
-          <Col lg={{ size: 2, offset: 8 }}>
+          {/* <Col lg={{ size: 2, offset: 8 }}>
             <div className='linksContainer'>
               <Link to='/portfolio'>
                 <Button className='homeButton montserrat-5 shadow'>
@@ -51,6 +46,22 @@ const Home = () => {
                 </Button>
               </Link>
             </div>
+          </Col> */}
+          <Col
+            lg={{ size: 3, offset: 6 }}
+            style={{
+              padding: '20px 15px',
+              textAlign: 'center',
+              backgroundColor: 'rgba(0,0,0,0.7'
+            }}
+          >
+            <Row>
+              {skillsArray.map((skill, index) => (
+                <Col xs='4' key={index} style={{ marginBottom: '15px' }}>
+                  <SkillIcon icon={skill.icon} color={skill.color} />
+                </Col>
+              ))}
+            </Row>
           </Col>
         </Row>
       </div>
