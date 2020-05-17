@@ -31,11 +31,11 @@ class NavBar extends Component {
   render() {
     return (
       <Fragment>
-        {/* <div className='brand'>
+        <div className='brand'>
           <Link to='/' className='brandLink'>
             <h1 className='brandName montserrat-9'>Eesa.uk</h1>
           </Link>
-        </div> */}
+        </div>
         <Minus
           width={30}
           lineHeight={3}
